@@ -1,17 +1,22 @@
 {
-  "project": "Internet JVX - Travou. Mas onde está o problema?",
-  "audio_duration_seconds": 60.9175,
-  "assets": [
-    {
-      "path": "assets/Narracao_JVX_Roberta.mp3",
-      "size_bytes": 991617,
-      "sha256": "74a099fc0504ec1321b4e1e822b2d095a42d265e0b402463ade485a0fe5a9a50"
+  "title": "Internet JVX — O perigo que você não vê.",
+  "date": "2026-11-12",
+  "status": "briefing publicado; narração nova ainda precisa ser enviada",
+  "narration_duration_seconds": 44.826063,
+  "files": {
+    "PROMPT_CLAUDE_CODE.md": {
+      "bytes": 30991,
+      "sha256": "fccdb2899bf601e24fd877775b6ec83ebd06edf3c6609ac5d9a48ff9e600177b"
     },
-    {
-      "path": "assets/Logo_JVX_Oficial.png",
-      "size_bytes": 282537,
-      "sha256": "39428239d6fe9f58348e5d2e89b5669c3dc678e6eff0d6a36f4d04255c350668"
+    "assets/Narracao_JVX_Chuva_Roberta_Oficial.mp3": {
+      "bytes": 734154,
+      "sha256": "5e39cd6b2dbdc8a600fcdc64a2a07c7173b708da72fe39ccab2220a7655fc552",
+      "status": "PENDENTE DE UPLOAD"
+    },
+    "assets/A-003_JVX_Logo_Oficial.png": {
+      "bytes": 282537,
+      "sha256": "39428239d6fe9f58348e5d2e89b5669c3dc678e6eff0d6a36f4d04255c350668",
+      "status": "logo da produção anterior, visualmente pixel-idêntica ao A-003 oficial original, mas codificação PNG distinta do novo ZIP"
     }
-  ],
-  "note": "Cenas são janelas provisórias por pausas na forma de onda, não timestamps de fala verificados."
+  }
 }

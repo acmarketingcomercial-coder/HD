@@ -1,26 +1,24 @@
-# Internet JVX — Motion Design: “Travou. Mas onde está o problema?”
+# Internet JVX — O perigo que você não vê.
 
-Projeto de produção audiovisual para Claude Code.
+Novo projeto de Motion Design, com narração definitiva de **44,826 segundos** e seis cenas.
 
-## Comece por aqui
+## Começar
 
-Leia **[PROMPT_CLAUDE_CODE.md](./PROMPT_CLAUDE_CODE.md)** integralmente. O documento contém briefing, roteiro, storyboard, direção de arte, mapa de som e etapas de QA.
+Leia integralmente [PROMPT_CLAUDE_CODE.md](./PROMPT_CLAUDE_CODE.md). O documento traz roteiro e copy aprovados, roteiro visual, identidade, sound design, especificação Remotion/FFmpeg e QA.
 
-## Assets enviados à raiz do repositório
+## Assets
 
-- **[Narracao_JVX_Roberta.mp3](./Narracao_JVX_Roberta.mp3)** — áudio original ElevenLabs, ~60,92 s. Preserve sem alteração.
-- **[Logo_JVX_Oficial.png](./Logo_JVX_Oficial.png)** — logotipo oficial transparente. Não redesenhar nem recolorir.
-- **[MANIFEST.json](./MANIFEST.json)** — manifesto de origem.
-- **[MARCADOR_DE_CENAS_PROVISORIO.csv](./MARCADOR_DE_CENAS_PROVISORIO.csv)** — marcações estimadas, NÃO tempo de fala verificado.
+- ✅ [assets/A-003_JVX_Logo_Oficial.png](./assets/A-003_JVX_Logo_Oficial.png): cópia visualmente idêntica, pixel por pixel, à logo A-003 do pacote; a codificação PNG possui hash diferente. O arquivo oficial exato, quando enviado, deve substituí-la.
+- ⏳ **PENDENTE:** `assets/Narracao_JVX_Chuva_Roberta_Oficial.mp3`, o áudio oficial da nova campanha, duração 44,826 segundos. **Não comece a renderizar até esse áudio estar presente.** Não reutilize a narração do vídeo “Travou.”.
 
-Há também notas em `production_notes/`, mas os arquivos essenciais do pacote já estão na raiz. Quando necessário, copie o áudio e a logo para `public/assets/` do projeto sem modificar seus bytes.
+O pacote novo foi preparado no ChatGPT. Para concluir a migração, envie o MP3 da pasta `assets/` do ZIP ao GitHub pelo navegador, sem renomear.
 
-> **PRIVACIDADE:** O repositório foi verificado como **PUBLIC** em 11/11/2026. Os assets enviados ficam expostos. Para restringir acesso: Settings → General → Danger Zone → Change repository visibility → Private.
+**Atenção:** este repositório foi encontrado **PÚBLICO**. Antes de enviar a nova gravação, altere para privado: Settings → General → Danger Zone → Change repository visibility → Private.
 
-## Instrução para Claude Code
+## Projeto anterior
 
-Leia integralmente `PROMPT_CLAUDE_CODE.md`. Inspecione os arquivos originais de áudio e logo que estão na **raiz** do repositório. Faça o alinhamento real da narração com as 10 cenas, mantenha copy e marca intactas e produza primeiro uma prévia audiovisual de 12–18 segundos, com movimento, trilha e efeitos. Não substitua a direção por slides animados. Aguarde aprovação antes do render completo.
+A versão do filme “Travou. Mas onde está o problema?” foi preservada na branch `backup-travou-jvx-antes-da-substituicao`. Ela não faz mais parte da branch principal.
 
-## Formato
+## Instrução ao Claude Code
 
-Vertical 1080×1920, 30 fps, duração final estimada 62–64 s, condicionada à sincronização com o áudio de 60,9175 s.
+> Leia `PROMPT_CLAUDE_CODE.md` integralmente. Confira a presença do novo arquivo de áudio em `assets/Narracao_JVX_Chuva_Roberta_Oficial.mp3` e a logo em `assets/A-003_JVX_Logo_Oficial.png`. Não use materiais do filme anterior. Se a nova narração não existir, reporte a pendência e não substitua por outra. Quando ela estiver presente, produza as seis cenas conforme o briefing aprovado, com Remotion e sound design narrativo; renderize MP4 e entregue projeto editável com QA.
