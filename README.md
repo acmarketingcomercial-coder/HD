@@ -1,24 +1,26 @@
 # Internet JVX — O perigo que você não vê.
 
-Novo projeto de Motion Design, com narração definitiva de **44,826 segundos** e seis cenas.
+Novo projeto de Motion Design com **narração aprovada de 44,826063 segundos** e seis cenas.
 
 ## Começar
 
-Leia integralmente [PROMPT_CLAUDE_CODE.md](./PROMPT_CLAUDE_CODE.md). O documento traz roteiro e copy aprovados, roteiro visual, identidade, sound design, especificação Remotion/FFmpeg e QA.
+Leia integralmente [PROMPT_CLAUDE_CODE.md](./PROMPT_CLAUDE_CODE.md). O arquivo inclui roteiro e copy bloqueada, storyboard, direção cinematográfica, sound design, especificação Remotion/FFmpeg e QA.
 
-## Assets
+## Assets existentes
 
-- ✅ [assets/A-003_JVX_Logo_Oficial.png](./assets/A-003_JVX_Logo_Oficial.png): cópia visualmente idêntica, pixel por pixel, à logo A-003 do pacote; a codificação PNG possui hash diferente. O arquivo oficial exato, quando enviado, deve substituí-la.
-- ⏳ **PENDENTE:** `assets/Narracao_JVX_Chuva_Roberta_Oficial.mp3`, o áudio oficial da nova campanha, duração 44,826 segundos. **Não comece a renderizar até esse áudio estar presente.** Não reutilize a narração do vídeo “Travou.”.
+- ✅ [assets/Narracao_JVX_Chuva_Roberta_Oficial.mp3](./assets/Narracao_JVX_Chuva_Roberta_Oficial.mp3) — **presente e íntegro**. É a gravação desta campanha, preservada byte a byte a partir de `ElevenLabs_2026-11-12T04_02_36_Roberta - Casual, Engaging and Clear_pvc_s50_sim75_v4.mp3`. SHA-256 `5e39cd6b2dbdc8a600fcdc64a2a07c7173b708da72fe39ccab2220a7655fc552`.
+- ⚠️ [assets/A-003_JVX_Logo_Oficial.png](./assets/A-003_JVX_Logo_Oficial.png) — **presente**, mas é uma versão PNG da campanha anterior de **282.537 bytes**, não exatamente os bytes do A-003 contido no pacote novo (**282.544 bytes; SHA-256 `0bf80ac3f39c929e5026c93e9f011468203c53bd162b1da72ef35da4cf3b1d9f`**). Substitua pela logo do pacote novo para cumprir o requisito de arquivo oficial idêntico. Não recriar.
 
-O pacote novo foi preparado no ChatGPT. Para concluir a migração, envie o MP3 da pasta `assets/` do ZIP ao GitHub pelo navegador, sem renomear.
+O MP3 não precisa ser reenviado.
 
-**Atenção:** este repositório foi encontrado **PÚBLICO**. Antes de enviar a nova gravação, altere para privado: Settings → General → Danger Zone → Change repository visibility → Private.
+## Privacidade
+
+**Atenção: o repositório está PÚBLICO.** A narração fica acessível a qualquer pessoa. Recomenda-se tornar **Private** em Settings → General → Danger Zone → Change repository visibility.
 
 ## Projeto anterior
 
-A versão do filme “Travou. Mas onde está o problema?” foi preservada na branch `backup-travou-jvx-antes-da-substituicao`. Ela não faz mais parte da branch principal.
+O filme “Travou. Mas onde está o problema?” foi preservado na branch [backup-travou-jvx-antes-da-substituicao](../tree/backup-travou-jvx-antes-da-substituicao). A branch `main` contém apenas o novo briefing e assets desta campanha.
 
-## Instrução ao Claude Code
+## Instrução para Claude Code
 
-> Leia `PROMPT_CLAUDE_CODE.md` integralmente. Confira a presença do novo arquivo de áudio em `assets/Narracao_JVX_Chuva_Roberta_Oficial.mp3` e a logo em `assets/A-003_JVX_Logo_Oficial.png`. Não use materiais do filme anterior. Se a nova narração não existir, reporte a pendência e não substitua por outra. Quando ela estiver presente, produza as seis cenas conforme o briefing aprovado, com Remotion e sound design narrativo; renderize MP4 e entregue projeto editável com QA.
+> Leia e execute integralmente o `PROMPT_CLAUDE_CODE.md` desta branch. Utilize `assets/Narracao_JVX_Chuva_Roberta_Oficial.mp3` como timeline mestra e `assets/A-003_JVX_Logo_Oficial.png` como marca oficial, após conferir/substituir o PNG pela cópia exata. Não reutilize arquivos nem código do filme anterior. Produza seis cenas em Remotion, com chuva realista e sound design narrativo, faça QA, renderize o MP4 e entregue o projeto editável. Registre as verificações de licença comercial antes da publicação.
