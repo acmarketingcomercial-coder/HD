@@ -1,13 +1,15 @@
 # PROMPT MESTRE DE PRODUÇÃO — AC MOTION STUDIO / INTERNET JVX
-## Filme: “Travou. Mas onde está o problema?” | V1.0 | 11/11/2026
+## Filme: “Travou. Mas onde está o problema?” | V1.1 | 11/11/2026
+
+> **LOCALIZAÇÃO DOS ASSETS NO GITHUB:** Os arquivos originais `Narracao_JVX_Roberta.mp3` e `Logo_JVX_Oficial.png` foram enviados à **raiz do repositório HD**, não à pasta `assets/`. Use os caminhos de entrada da raiz e, se a implementação precisar, copie-os sem alteração para `public/assets/` do projeto. Não solicite arquivos que já estão na raiz.
 
 > **INSTRUÇÃO PARA O CLAUDE CODE:** Você é o diretor técnico de Motion Design, editor audiovisual e responsável pela implementação do vídeo. **Produza uma peça audiovisual real**, com composição, animação, sincronização da narração e planejamento/implementação sonora, seguindo rigorosamente este documento. Este briefing é integral e autossuficiente: não presuma acesso a conversas anteriores, arquivos ou memórias do ChatGPT. A direção conceitual, o texto da locução e as regras institucionais estão definidos aqui. NÃO alterar texto aprovado, alegações, identidade ou intenção criativa para “facilitar” a implementação. Não apresente sequências de slides com textos apenas entrando e saindo. **Primeiro crie uma prévia audiovisual com movimento e som para aprovação.** Depois da validação, finalize o filme.
 
 ## 0. ARRANQUE OPERACIONAL E FONTES DE VERDADE
 
 1. Abra esta pasta como raiz do projeto ou copie os arquivos preservando os caminhos relativos:
-   - `assets/Narracao_JVX_Roberta.mp3` — **locução final fornecida**, voz feminina Roberta / ElevenLabs, pt-BR; MP3 mono, 44.100 Hz, duração medida **60,9175 s**. NÃO substituir por TTS, regravar, alterar timbre, pitch, velocidade ou cortar palavras sem autorização.
-   - `assets/Logo_JVX_Oficial.png` — **logotipo oficial original** fornecido; PNG RGBA 1080×1080 transparente. A área alfa visível ocupa aproximadamente x=179–880 e y=284–814; preserve o arquivo pixel a pixel, incluindo elipse violeta, lettering laranja, a palavra INTERNET, relevo e alpha. O arquivo enviado é visualmente idêntico ao A-003 oficial. NÃO redesenhar, vetorizar automaticamente, criar uma versão “parecida”, trocar cores, aplicar filtro sobre a logo ou usar ícone alternativo.
+   - `Narracao_JVX_Roberta.mp3` — **locução final fornecida**, voz feminina Roberta / ElevenLabs, pt-BR; MP3 mono, 44.100 Hz, duração medida **60,9175 s**. NÃO substituir por TTS, regravar, alterar timbre, pitch, velocidade ou cortar palavras sem autorização.
+   - `Logo_JVX_Oficial.png` — **logotipo oficial original** fornecido; PNG RGBA 1080×1080 transparente. A área alfa visível ocupa aproximadamente x=179–880 e y=284–814; preserve o arquivo pixel a pixel, incluindo elipse violeta, lettering laranja, a palavra INTERNET, relevo e alpha. O arquivo enviado é visualmente idêntico ao A-003 oficial. NÃO redesenhar, vetorizar automaticamente, criar uma versão “parecida”, trocar cores, aplicar filtro sobre a logo ou usar ícone alternativo.
 2. Verifique se ambos os arquivos estão disponíveis e decodificáveis antes de desenvolver cenas. Se não estiverem, **pare e indique o que falta**, sem gerar outro logo ou outra narração.
 3. Inspecione as skills realmente disponíveis no seu ambiente relacionadas a **Remotion, Motion Design, áudio e Sound Effects**. Use a(s) que melhor atender(em) à tarefa. Não assuma que todas existem; não imponha todos os frameworks simultaneamente. Prefira um fluxo reproduzível, editável, com renderização via Remotion + React/TypeScript quando instalado e funcional; complemente com FFmpeg para inspeção, áudio e transcodificação. Use Blender, After Effects ou outro editor somente se a produção efetivamente exigir e houver acesso. Não faça da ausência de ferramenta uma justificativa para substituir o conceito por slideware.
 4. Trate a **locução em MP3 como autoridade para duração e sincronização**, e este roteiro como texto editorial aprovado. Compare o que foi falado com o roteiro abaixo. Se encontrar diferença, **não invente transcrição nem regrave**: reporte exatamente a divergência e mantenha a gravação intacta. Extraia alinhamento real de frases e palavras por escuta, forma de onda e/ou ferramenta de alinhamento efetivamente disponível. Os pontos de silêncio indicados adiante são **candidatos**, não carimbos semânticos comprovados.
@@ -234,8 +236,8 @@ A estrutura dramática é: **mistério → pistas → descoberta → orientaçã
 ## G. ASSETS, PRODUÇÃO VISUAL E RESTRIÇÕES DE ORIGEM
 
 ### Assets já fornecidos no pacote
-- `assets/Narracao_JVX_Roberta.mp3`
-- `assets/Logo_JVX_Oficial.png`
+- `Narracao_JVX_Roberta.mp3`
+- `Logo_JVX_Oficial.png`
 
 ### Assets ainda necessários (NÃO alegar que estão anexados)
 - Smartphone fotográfico realista em plano 3/4, com tela manipulável em composição.
