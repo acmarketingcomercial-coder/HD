@@ -1,24 +1,34 @@
 {
-  "title": "Internet JVX — O perigo que você não vê.",
+  "project_id": "CEMESC-MOTION-20261112-PALPITACOES-v01",
+  "brand": "CEMESC",
   "date": "2026-11-12",
-  "status": "briefing e narração oficial publicados; conferir/substituir PNG da logo pela cópia exata do pacote antes do master",
-  "narration_duration_seconds": 44.826063,
-  "files": {
-    "PROMPT_CLAUDE_CODE.md": {
-      "bytes": 30991,
-      "sha256": "fccdb2899bf601e24fd877775b6ec83ebd06edf3c6609ac5d9a48ff9e600177b"
+  "status": "roteiro e direção aprovados; produção não iniciada; master depende de aprovação de prévia",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect_ratio": "9:16",
+    "master_duration_target_seconds_approx": 39.5
+  },
+  "narration_duration_seconds": 35.47425,
+  "narration_is_master_timeline": true,
+  "official_assets": {
+    "assets/CEMESC_Logo_Oficial_20261112.png": {
+      "source_uploaded_name": "Logo Cemesc(1).png",
+      "bytes": 366218,
+      "sha256": "e7c368b86d98527970cf5c06a7cd1781914b5480e826a14809ffb8b04e591b2e",
+      "present_in_source": true,
+      "role": "logo oficial integral"
     },
-    "assets/Narracao_JVX_Chuva_Roberta_Oficial.mp3": {
-      "bytes": 734154,
-      "sha256": "5e39cd6b2dbdc8a600fcdc64a2a07c7173b708da72fe39ccab2220a7655fc552",
-      "status": "PRESENTE, sha256 confere com MP3 original"
-    },
-    "assets/A-003_JVX_Logo_Oficial.png": {
-      "bytes": 282537,
-      "sha256": "39428239d6fe9f58348e5d2e89b5669c3dc678e6eff0d6a36f4d04255c350668",
-      "status": "PRESENTE: versão antiga de 282537 bytes; RECOMENDADA SUBSTITUIÇÃO pelo A-003 oficial do pacote de 282544 bytes",
-      "official_sha256": "0bf80ac3f39c929e5026c93e9f011468203c53bd162b1da72ef35da4cf3b1d9f",
-      "official_bytes": 282544
+    "assets/CEMESC_Narracao_Palpitacoes_20261112_Leni.mp3": {
+      "source_uploaded_name": "ElevenLabs_2026-11-12T17_28_25_Leni - Meditative and profound_pvc_s50_sim75_v4(1).mp3",
+      "bytes": 584525,
+      "sha256": "d870641c933f7e0f48c03daa4c8b99f8cdedf69cbab37163209bd79b0a9e72e6",
+      "present_in_source": true,
+      "role": "locução aprovada"
     }
-  }
+  },
+  "other_assets_status": "não fornecidos: b-roll, fotos oficiais da equipe, trilha comercial licenciada, efeitos com licenças confirmadas",
+  "previous_backup_branch": "backup-jvx-antes-cemesc-20261112",
+  "repository_visibility_notice": "public; verificar privacidade e direitos"
 }

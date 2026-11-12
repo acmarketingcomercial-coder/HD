@@ -1,293 +1,185 @@
-# AC MOTION STUDIO — BRIEFING TÉCNICO AUTOSSUFICIENTE PARA CLAUDE CODE
-## Internet JVX | Filme: “O perigo que você não vê.” | V1 — 12/11/2026
+# AC MOTION STUDIO | CEMESC — PALPITAÇÕES E PREVENÇÃO DAS ARRITMIAS
 
-> **MISSÃO:** produzir, em uma nova pasta/projeto editável, um filme vertical completo para Instagram Reels da Internet JVX. Crie o projeto, organize assets e licenças, sincronize a imagem com a narração enviada, faça Motion Design cinematográfico com chuva realista e sound design narrativo, renderize o MP4 e execute QA. **Não transforme a história em slides animados.** Este documento é autossuficiente. Não dependa de conversas anteriores. Não reutilize o código ou a composição visual de filmes anteriores sem justificativa.
+**Documento técnico autossuficiente para Claude Code**  
+**Projeto:** `CEMESC-MOTION-20261112-PALPITACOES-v01`  
+**Situação:** direção criativa e texto aprovados pelo cliente; vídeo ainda não produzido nem aprovado.  
+**Produção-alvo:** Reels/Stories vertical, 1080 × 1920, 9:16, 30 fps, H.264 + AAC, áudio estéreo, 39–40 s (ajustar ao áudio original e à leitura da cartela final).
 
-## 0. Entrada e regras de precedência
+## 0. Instrução ao executor
 
-**Arquivos obrigatórios fornecidos junto a este prompt:**
-- `assets/Narracao_JVX_Chuva_Roberta_Oficial.mp3` — arquivo ElevenLabs fornecido pelo cliente. **Áudio definitivo, imutável.** Duração verificada com ffprobe: **44,826063 s**, mono, 44.100 Hz, MP3 ~128 kb/s. SHA-256: `5e39cd6b2dbdc8a600fcdc64a2a07c7173b708da72fe39ccab2220a7655fc552`. Arquivo original recebido com nome `ElevenLabs_2026-11-12T04_02_36_Roberta - Casual, Engaging and Clear_pvc_s50_sim75_v4.mp3` (cópia byte a byte).
-- `assets/A-003_JVX_Logo_Oficial.png` — assinatura original oficial **RGBA, 1080×1080**, SHA-256: `0bf80ac3f39c929e5026c93e9f011468203c53bd162b1da72ef35da4cf3b1d9f`. **Aplicar como camada real, sem reconstrução.**
+Você está executando a produção audiovisual de uma campanha para uma clínica real. Este documento tem TODAS as informações de projeto necessárias. Não presuma acesso ao histórico do ChatGPT. **Leia primeiro este documento e o `MANIFEST.json`; valide os arquivos reais de `assets/`; produza inicialmente apenas um preview curto com som. Não renderize o master completo antes do aceite do responsável.**
 
-Se os caminhos forem outros no ambiente, localize os arquivos **pelo nome e hash**, reorganize cópias sem alterar os originais e registre o caminho final. Se algum asset estiver ausente, NÃO invente um substituto. Sinalize a pendência. Não confunda a locução deste filme (44,83 s) com a locução de 60,92 s de qualquer outro projeto JVX.
+Use as skills efetivamente instaladas no seu ambiente, quando pertinentes (Remotion, Motion Design, Sound Effects, FFmpeg). Procure e leia suas instruções antes de implementar. Escolha o conjunto mínimo apropriado: Remotion/React para composição determinística é recomendável; FFmpeg/ffprobe para inspeção de áudio e encode; uma ferramenta de edição de áudio para mixagem e QA. **Não é obrigatório usar todas as tecnologias mencionadas.**
 
-**Hierarquia:** (1) áudio definitivo e narração literal aprovada; (2) logotipo A-003 original; (3) diretrizes deste documento; (4) verificações técnicas e legais; (5) decisões de implementação. Este filme é uma peça **institucional educativa**, não uma oferta comercial.
+O resultado precisa parecer um filme editorial de saúde concebido para movimento, não uma apresentação de slides, um template de clínica ou um carrossel animado. O sound design integra a narrativa desde o primeiro storyboard.
 
-## 1. Objetivo, público e efeito narrativo
+## A. Briefing e posicionamento
 
-**Objetivo:** conscientizar moradores e clientes sobre os riscos que podem tornar determinadas intervenções externas em postes inseguras durante temporais, mostrando que a avaliação das condições e a proteção de quem trabalha na infraestrutura são parte de uma atuação responsável.
+- **Marca:** CEMESC, Centro Médico Especializado de Coluna, clínica multiprofissional em Coluna, Minas Gerais, Brasil.
+- **Tema:** palpitações e informações úteis para avaliação cardiológica.
+- **Peça de conscientização:** 12 de novembro — Dia Nacional de Prevenção das Arritmias Cardíacas e Morte Súbita.
+- **Público:** público adulto não especializado, especialmente quem já percebeu episódios transitórios de coração acelerado.
+- **Objetivo:** identificação imediata, educação prática sobre o que observar e associação da CEMESC a orientação em Cardiologia, sem transformar o filme em anúncio alarmista.
+- **Tom de voz:** humano, calmo, tecnicamente responsável, próximo e profissional.
+- **Mensagem que deve permanecer:** três informações observáveis ajudam na avaliação: duração, contexto do início e sintomas associados. Episódios recorrentes merecem investigação; não presumir arritmia.
+- **CTA:** orientação especializada, sem induzir urgência artificial nem prometer diagnóstico, tratamento ou cura.
+- **Canais:** Instagram Reels e Stories, visualização mobile, também adequado a mídia paga após revisão publicitária.
+- **Relação com feed:** não repetir automaticamente curva verde, faixa inferior, foto genérica com médico frontal, logo fixa no mesmo canto ou tratamento idêntico em todas as cenas.
 
-**Público:** moradores e clientes de Coluna/MG e região, que valorizam uma conexão confiável e atendimento próximo. Não alegar cobertura em nenhuma localidade específica além da identificação institucional de Coluna/MG.
+### Identidade e limites imutáveis
 
-**Tese:** parece apenas um poste molhado, mas há infraestrutura elétrica e riscos de trabalho em altura que não são óbvios à primeira vista. A mensagem começa intrigante, revela os fatores concretos, reconhece o transtorno para o cliente e termina com respeito aos profissionais.
+- O verde extraído visualmente da marca, branco e neutros formam o universo cromático. Não declarar HEX como especificações oficiais. Uma **paleta operacional de produção (não canônica)** pode partir de: verde-amostra `#006F66` (estimativa), verde de leitura `#064F49`, branco `#FFFFFF`, off-white `#F5F6F2`, cinza `#697674`, carvão suave `#1E2F2C`. Validar contraste na composição real; nenhuma dessas amostras altera a identidade oficial.
+- Fonte operacional sugerida: **Inter** em pesos regulares, médios e semibold, se disponível/licenciada. Não declarar que Inter é a fonte institucional definitiva. Evitar serifas decorativas e lettering clínico genérico.
+- **Logo:** `assets/CEMESC_Logo_Oficial_20261112.png`, PNG original RGBA 1080 × 1080, com transparência, arquivo integral. A assinatura inferior “CENTRO MÉDICO ESPECIALIZADO DE COLUNA” faz parte da imagem. Nunca recriar, redesenhar, recortar o símbolo, retirar a assinatura, recolorir, distorcer ou gerar logotipo por IA. Não substituir por texto “CEMESC”. É permitido posicionar/redimensionar proporcionalmente **a imagem inteira**, com respiro e fundo de alto contraste. Não processar a marca para “melhorar” seu desenho.
+- Fotos reais autorizadas de profissionais e da clínica são preferenciais; **nenhuma foto de equipe, paciente ou consultório real foi entregue neste pacote**. Não fingir que pessoas sintéticas ou vídeos de banco são profissionais/pacientes da CEMESC. Pode usar imagens ilustrativas genéricas, pessoas não identificadas e gestos cotidianos, desde que direitos comerciais sejam verificados e não impliquem atendimento real.
+- Não inventar nomes, CRMs, credenciais, equipamentos, locais, horários, telefones, dados clínicos, depoimentos, exames ou resultados. Não usar anatomia imprecisa ou um eletrocardiograma decorativo com traçado enganoso. Não representar arritmia como diagnóstico imediato e não tratar palpitação como equivalente de parada cardíaca.
+- Copy aprovada é **BLOQUEADA**. Não mudar acentos, grafia, pontuação ou “No CEMESC” para “Na CEMESC”. Não inserir travessão na copy pública.
 
-**Emoção:** curiosidade → atenção → compreensão → empatia → confiança. **Nunca** medo gratuito, terrorismo visual ou culpabilização do cliente.
+## B. Assets obrigatórios e status
 
-**Posicionamento:** “Internet que não te deixa na mão.” É assinatura de marca, **não** garantia técnica de 100% de disponibilidade.
+1. **Locução aprovada e fornecida:** `assets/CEMESC_Narracao_Palpitacoes_20261112_Leni.mp3`. MP3 original, sem cortes, 35,474 s (ffprobe), 584.525 bytes, SHA-256 `d870641c933f7e0f48c03daa4c8b99f8cdedf69cbab37163209bd79b0a9e72e6`. É a **timeline mestra**. Não regenerar voz e não aplicar time-stretch, alterações de pitch, denoise agressivo ou cortes arbitrários.
+2. **Logo original fornecida:** `assets/CEMESC_Logo_Oficial_20261112.png`. PNG RGBA com transparência, 1080 × 1080, 366.218 bytes, SHA-256 `e7c368b86d98527970cf5c06a7cd1781914b5480e826a14809ffb8b04e591b2e`. Não reconstruir.
+3. **Texto de narração e cartela:** também reproduzidos abaixo, fonte de verdade textual do briefing, sujeito à conferência com áudio.
+4. **Não fornecidos:** fotografias reais autorizadas da equipe/atendimento, B-roll de cotidiano, música licenciada, efeitos sonoros licenciados, licenças comerciais das fontes/sons, versão vetorial da logo e especificações cromáticas oficiais. Os arquivos ausentes não devem ser simulados como se existissem. Registrar no QA a origem e a licença de quaisquer assets adicionados pelo executor.
 
-**Formato:** 1080×1920, vertical 9:16, 30 fps, áudio brasileiro, linguagem publicitária editorial. **Duração governada pelo MP3 de 44,826063 s.** Diretriz: aproximadamente **47–49 s**, com 1,5–3 s de sustentação visual/sonora após a última palavra, se necessário. A antiga estimativa de 50–55 s não é meta fixa. Não desacelerar voz, acrescentar intervalos arbitrários nem cortar palavras para bater uma duração.
+**Checks obrigatórios antes de produzir:** verificar SHA-256, duração e inteligibilidade da locução; conferir alpha e integridade da marca, existência dos arquivos e dimensões. Se os hashes não coincidirem, PARAR e informar a divergência; não prosseguir usando aproximações.
 
-## 2. COPY APROVADA — BLOQUEADA — INTEGRAL
+### Copy exata — locução
 
-**Não reescrever, resumir, corrigir, traduzir, rearranjar, substituir, acrescentar CTA ou inventar outras frases na locução.** O MP3 é a mídia de produção; o texto abaixo é a referência para comparação e legendagem opcional. Se o áudio real divergir deste texto, relatar a divergência e **não gerar nova locução**.
-
-> Parece só um poste na chuva.
+> Seu coração já disparou de repente e, pouco depois, voltou ao normal?
 >
-> Mas o perigo nem sempre aparece na primeira olhada.
+> Se isso acontecer, três informações podem ajudar na avaliação médica.
 >
-> Em muitos lugares, os cabos de internet compartilham o poste com a rede elétrica.
+> Primeiro: quanto tempo durou?
 >
-> E, durante um temporal, vento, superfícies molhadas e risco de descargas atmosféricas podem tornar uma intervenção em altura perigosa.
+> Segundo: o que você estava fazendo quando começou?
 >
-> Por isso, antes de realizar o serviço, é preciso avaliar as condições.
+> Terceiro: sentiu tontura, falta de ar ou algum outro sintoma?
 >
-> Se não houver segurança, o atendimento externo pode precisar esperar.
+> Nem toda palpitação significa arritmia, mas episódios recorrentes merecem investigação.
 >
-> A gente sabe o quanto ficar sem conexão atrapalha a rotina.
+> No CEMESC, você conta com atendimento em Cardiologia para cuidar da saúde do seu coração.
 >
-> Mas cuidar de quem trabalha para restabelecê-la também faz parte de um atendimento responsável.
->
-> Internet JVX.
->
-> Internet que não te deixa na mão.
+> Cuide-se com orientação especializada.
 
-**Texto de tela já previsto no storyboard e autorizado:**
-- Cena 01: `Parece só chuva?`
-- Cena 02: `Rede elétrica` e `Cabos de internet` como **rótulos técnicos** discretos, ligados às estruturas corretas.
-- Cena 03: `Vento`, `Umidade`, `Descargas atmosféricas` — um por vez, exatamente quando a narração abordar as respectivas condições; se a leitura exigir, use dois elementos em vez de três simultaneamente.
-- Cena 04: `Segurança em primeiro lugar.`
-- Cena 06: `Internet que não te deixa na mão.` juntamente com a logo original.
+**IMPORTANTE:** transcrever e confrontar o MP3 antes da montagem. Se a gravação divergir do roteiro textual, reportar **com a marcação temporal exata** para decisão, sem editar a fala por conta própria. O MP3 já existe e prevalece como duração; o texto acima é a copy aprovada para leitura/validação. Não gravar uma nova locução.
 
-**Não existe CTA comercial aprovado para este filme.** Não inserir botão WhatsApp, número de telefone, chamada de contratação, mascote, preços, dados ou slogans extras. O título “O perigo que você não vê.” nomeia a campanha e **não precisa virar uma headline adicional na tela**. Não adicionar legendas completas por padrão; se criar legendas acessíveis, oferecer SRT separado e opção de ativação.
+### Copy exata — cartela final de conscientização
 
-## 3. Planejamento de tempo — âncoras provisórias, áudio manda
+12 de novembro
 
-A onda sonora foi examinada previamente; as seguintes **pausas maiores são detectadas automaticamente**, não constituem transcrição ou alinhamento fonético validado: 2,02–2,48; 5,46–5,91; 10,87–11,32; 20,46–20,92; 25,56–25,95; 30,07–30,57; 34,18–34,62; 39,96–40,40; 42,15–42,56 s. Há também pausas curtas internas. **Não assuma que cada silêncio equivale necessariamente a uma mudança de cena.**
+Dia Nacional de Prevenção das Arritmias Cardíacas e Morte Súbita
 
-Planejamento inicial de seis blocos (ajuste após alinhamento do áudio):
+CEMESC [representado pela imagem da logo oficial, não digitado]
 
-| Cena | Janela inicial aproximada | Conteúdo narrativo | Regra de sincronização |
-|---|---:|---|---|
-| 01 | 0,00–5,91 s | “Parece só um poste…” + “Mas o perigo…” | Gancho e primeira descoberta; começar visual e som de chuva desde o quadro 0. |
-| 02 | 5,91–11,32 s | Cabos de internet e rede elétrica | Revelar e rotular a infraestrutura ao pronunciar cada conceito. |
-| 03 | 11,32–aprox. 21,7 s | Temporal, vento, superfícies molhadas e risco de descargas | Cada condição aparece na respectiva palavra/frase, não todas de uma vez. |
-| 04 | aprox. 21,7–30,57 s | Avaliar condições; serviço pode esperar se inseguro | Momento da pausa visual e da frase de segurança. |
-| 05 | 30,57–40,40 s | Rotina do cliente + proteção do profissional | Passagem gradual de chuva exterior para ambiente doméstico. |
-| 06 | 40,40–44,83 s + respiro final | “Internet JVX” + slogan | Logo entra no nome; slogan visual acompanha a fala; segurar marca por ~1,5–3 s depois. |
+### Textos de apoio em tela — direção gráfica, não substituem a locução
 
-**Obrigatório:** usar reconhecimento de voz/alinhamento por palavra quando disponível, ou escuta e análise detalhada com FFmpeg/espectrograma; comparar com a transcrição aprovada. Registrar `timeline_alinhada.csv` com tempo de entrada/fim da fala, palavra-chave, cena, cue de movimento, cue sonoro, confiança do alinhamento. NUNCA declarar alinhamento palavra a palavra verificado se só estimou pelos silêncios.
+- Cena inicial: `Palpitação repentina?`
+- Introdução: `3 informações podem ajudar`
+- Ponto 1: `01` + `Quanto tempo durou?`
+- Ponto 2: `02` + `O que você estava fazendo?`
+- Ponto 3: `03` + `Houve outros sintomas?`
+- Apoios opcionais no ponto 3: `Tontura` / `Falta de ar` / `Outros sintomas`
+- Reflexão clínica: `Nem toda palpitação é arritmia.` [é condensação tipográfica, **não** alteração da narração; se a revisão clínica exigir literalidade na tela, substitua pelo trecho exato da locução]
+- Atendimento: `Cardiologia` e `Orientação especializada`
+- Encerramento: cartela exata acima.
 
-## 4. Direção de arte — identidade JVX e realismo
+Não adicionar novos enunciados médicos ou afirmações não revisadas. A hierarquia é uma mensagem principal de cada vez; não legendar a narração inteira simultaneamente com títulos grandes. Se produzir legendas acessíveis, renderize em faixa própria sem duplicações, com revisão literal da fala.
 
-- Marca: **Internet JVX**, provedor de fibra óptica sediado em Coluna/MG.
-- Navy predominante `#02132D`; azul secundário `#004AAD`; laranja de ênfase pontual `#FF8404`; branco/off-white neutros. O violeta só existe dentro da logo oficial e **não** integra a paleta do layout.
-- **Poppins obrigatória:** Bold/SemiBold para títulos, Medium em rótulos, Regular em apoios. Carregar fonte efetiva localmente (p. ex. `@fontsource/poppins`), sem fallback renderizado silenciosamente.
-- Design profissional para leitura mobile; margem lateral recomendada 90–110 px em 1080 de largura. Evitar conteúdos essenciais próximos das interfaces do Instagram — reservar referência ~220 px no topo e ~350 px na base, validar no Reel real.
-- **Uma ideia e um protagonista de cada vez.** Protagonista predominante: poste e infraestrutura sob tempestade. Evitar muitos widgets/ícones, excesso de labels e telas de texto.
-- Atmosfera de cidade brasileira plausível, **não** reconstrução documental da Coluna real, não inventar sede, cliente, técnicos, uniforme JVX ou instalações reais. Se usar cena sintetizada, tratá-la internamente como ilustração.
-- Visual: exterior com materiais e comportamento de chuva convincentes, luz natural de céu fechado, concreto molhado, cabos fisicamente plausíveis, sem fogos artificiais ou “energia correndo pelos fios”. A comunicação técnica pode usar discretos overlays 2.5D, linhas **informativas** e rótulos, sem enfeites repetitivos.
-- **Proibição:** pequenas barrinhas horizontais decorativas; arcos/ondas, sublinhados ornamentais, partículas neon, halos, fios elétricos brilhantes, faíscas fictícias, choque em trabalhador, drama de acidente. Não usar mascote.
-- Logotipo: usar somente o A-003 original no encerramento, nítido e íntegro. Sem refazer em CSS/SVG/IA, sem mudar cores, sem deformar ou recortar elementos. Se desejar presença secundária da marca no filme, **não** introduzir sem aprovação adicional: este storyboard só aprova assinatura final.
+## C. Conceito visual — “Da sensação à orientação”
 
-### Estratégia visual de implementação
+**Frase-direção:** uma sensação repentina interrompe o cotidiano; três fragmentos de memória tornam-se informação útil; a atenção se converte em conversa médica e orientação, terminando na data de conscientização.
 
-Priorizar **filmagem/stock legitimamente licenciado ou bases visuais realistas por camadas** para chuva e poste; se houver ferramenta de imagem comercialmente autorizada, criar somente *imagens-base sem texto e sem logo*, depois compor a marca real no Remotion. Só criar cenários em 3D/código quando o resultado for visualmente competitivo com uma produção profissional. Evitar repetir a maquete 3D geométrica de produções anteriores. Uma composição técnica esquemática limpa é preferível a 3D pseudo-realista ruim. Não roubar frames de referência, não usar a referência anterior como ativo e não inventar licença de foto/vídeo.
+A estética é **motion editorial misturado a fotografia documental e micrográficos explicativos**. O fio condutor é um **marcador de observação**: um traço curto, um círculo e uma pequena marca de anotação. Ele começa como a reação sutil a uma percepção corporal, torna-se indicador de tempo, ancora as três perguntas e fecha como um ponto de informação ao lado da marca. Não imitar o traçado de ECG; trata-se de um motivo editorial, sem significado clínico.
 
-Se não houver fotos, acesso a gerador ou biblioteca licenciada, construir uma versão visualmente consistente usando planos estilizados de acabamento editorial, camadas realistas de atmosfera e diagramas informativos. **Não declarar o resultado fotográfico se continuar ilustrativo.** Registrar as limitações e continuar a produção quando for possível entregar uma versão coerente.
+Fotografia: luz natural suave de janela, ambiente cotidiano plausível, tons neutros, profundidade fotográfica sutil. Evitar hospital azul, imagens dramáticas com mão apertando peito, cardiograma vermelho, partículas digitais genéricas e monitoramento médico fictício. Não representar a pessoa desmaiando, com dor torácica intensa ou em emergência, porque a copy não trata desse quadro.
 
-## 5. Storyboard, animação, movimento e som por cena
+Tipografia: forte e legível nas perguntas; delicada e espaçada nas cenas de transição; números `01 / 02 / 03` como elemento de orientação, não mero bullet. Uso restrito de motion blur, máscaras, easing refinado, parallax leve e transições por correspondência. A tela deve permanecer respirável.
 
-### CENA 01 — Gancho: “Parece só chuva?” | aprox. 0–5,91 s
+**Movimentos com propósito**: quando a pessoa interrompe o gesto, a câmera desacelera; quando surge uma pergunta, o marcador vira um novo elemento; quando as três informações são reunidas, o layout deixa de ser fragmentado; no final, a animação descansa e entrega silêncio visual. Não usar animações de entrada aleatórias ou mudanças de tela abruptas a cada frase.
 
-**Imagem:** abertura em quadro fechado de água atingindo concreto ou cabo, fundo escuro realista; revelar gradualmente o poste em uma rua brasileira genérica durante um temporal, em 3/4 e ângulo baixo. Movimento de câmera suave de aproximação e início de subida. Gotas aderem, deslizam e respingam com gravidade e escala compatíveis. O poste precisa dominar a cena; não gastar segundos com fundo totalmente vazio.
+## D. Storyboard audiovisual — macrotempos medidos e ajustes obrigatórios
 
-**Texto:** `Parece só chuva?` após a primeira frase, com leitura breve, Poppins branca. Não cobrir o ponto de descoberta. A pergunta é tensão visual, não “card de título” sobre fundo estático.
+A duração do MP3 é **35,474 s**, sem time-stretch. Os limites abaixo são **marcos de edição provisórios inferidos do envelope de atividade da voz**; não são word-level timestamps validados. Sincronize os cortes após escuta/inspeção e, se houver alinhador confiável, confirme palavra a palavra. O silêncio final e a cartela devem ser acrescentados **após** o término da voz. Prevê-se master em torno de **39,5 s**.
 
-**Som:** chuva começa imediatamente, com gotas próximas e ambiência distante; um trovão distante, curto e discreto se justificar o espaço. A música começa rarefeita. Nada de trovão alto cobrindo a voz.
+| Cena / janela inicial | Trecho da locução (exato) | Composição e narrativa visual | Movimento / conexão | Sound design |
+|---|---|---|---|---|
+| **01 · 00:00–00:04.90** | “Seu coração já disparou de repente e, pouco depois, voltou ao normal?” | Vertical cinematográfico; pessoa adulta genérica em tarefa simples, vista de lado ou mãos/torso, não retrato falso de paciente. A atividade pausa; close no gesto, não em sofrimento. Em uma área limpa aparece `Palpitação repentina?`. | Começo quase documental; pequeno push-in de 2–3%; um marcador circular discreto acompanha a percepção e repousa. Abrir espaço negativo por máscara suave, não borrão que esconda a cena. | Ambiência doméstica muito baixa; **um** impulso orgânico abafado (não batimento alarmista) no instante da pausa; leve redução da ambiência para dar foco à pergunta. |
+| **02 · 00:04.90–00:09.65** | “Se isso acontecer, três informações podem ajudar na avaliação médica.” | Mesmo marcador migra para um caderno de notas conceitual ou interface abstrata sem dados pessoais. O número `3` é protagonista; três áreas vazias surgem por recortes. Texto: `3 informações podem ajudar`. | Match cut do círculo para ponto de uma anotação; três módulos deslizam em profundidade suave, sem entrar e sair como slides. | Textura de papel/interface suave; swell curto de clareza, não impacto grave. Trilha deixa mais espaço na fala. |
+| **03 · 00:09.65–00:12.05** | “Primeiro: quanto tempo durou?” | Cartão editorial integrado à cena: `01` e `Quanto tempo durou?`, com ponteiro/anel temporal minimalista, sem cronometragem fictícia. | Marcador torna-se círculo de duração; arco simples percorre parte do círculo sem sugerir segundos reais. Enquadramento de detalhe. | Tick analógico suave, **um só** no encaixe do `01`; sem beep de monitor. |
+| **04 · 00:12.05–00:15.70** | “Segundo: o que você estava fazendo quando começou?” | A câmera recua do círculo e revela contexto cotidiano/gesto anterior. `02` e `O que você estava fazendo?`. Pode ser a mesma pessoa retomada visualmente, com montagem de 1–2 planos coerentes (repouso/trabalho), não uma coleção de imagens contraditórias. | Reenquadramento com máscara de continuidade; o círculo vira um pequeno marcador no quadro; movimento horizontal leve conduz à próxima pergunta. | Transição direcional curta e macia; microtextura ambiente, sem vinheta de aplicativo. |
+| **05 · 00:15.70–00:20.70** | “Terceiro: sentiu tontura, falta de ar ou algum outro sintoma?” | `03` e `Houve outros sintomas?` em escala alta; aparecem como anotações `Tontura`, `Falta de ar`, `Outros sintomas`, legíveis uma por vez. Nenhuma imagem simulando gravidade extrema. | Palavras entram por revelação ligada à anotação, não como balas saltando; uma nota por trecho da voz. Os três módulos permanecem visualmente associados. | Dois ou três microcliques suaves de anotação, com intervalos naturais; a última etiqueta **não** precisa de som. |
+| **06 · 00:20.70–00:26.85** | “Nem toda palpitação significa arritmia, mas episódios recorrentes merecem investigação.” | As três anotações ocupam uma página ou superfície única, que se desloca para uma conversa médica ilustrativa. Texto breve `Nem toda palpitação é arritmia.` e, após uma pausa, a ideia de observação/avaliação. Evitar ECG decorativo. | Cartões se alinham e se tornam um resumo; dissolução por match de objeto (caderno/mãos) para consultório genérico de luz natural. Diminuir velocidade, aumentar respiro. | Pequeno som de alinhamento/papel; ambiência de consultório neutra e quase inaudível; trilha estabiliza e perde tensão. |
+| **07 · 00:26.85–00:32.55** | “No CEMESC, você conta com atendimento em Cardiologia para cuidar da saúde do seu coração.” | Atendimento genérico ilustrativo: escuta e orientação sem rosto identificável de profissional real, e sem placa ou jaleco atribuído à CEMESC. Palavra `Cardiologia` aparece com tipografia editorial, seguida de `Orientação especializada` apenas quando adequada ao trecho da fala. Se houver fotos oficiais autorizadas fornecidas posteriormente, preferi-las. | Push-in de câmera mais lento; elemento de anotação torna-se uma linha de base discreta para o texto; a composição se simplifica. | Trilha ganha leve calor harmônico; **nenhum** som clínico artificial nem batimento. |
+| **08 · 00:32.55–00:35.48** | “Cuide-se com orientação especializada.” | Plano final humano ou fundo claro com o marcador repousando. Breve transição editorial para identidade institucional. Não sobrepor a logo pequena sobre cena carregada. | Movimento desacelera; fade/corte por brilho natural ou máscara de forma; garantir que a palavra final termine antes da cartela. | Pequena resolução musical, sem clímax publicitário; room tone desaparece gradualmente. |
+| **09 · 00:35.48–~00:39.50** | **Sem narração.** | Cartela final limpa em fundo branco/off-white, com `12 de novembro`, o título literal `Dia Nacional de Prevenção das Arritmias Cardíacas e Morte Súbita` e, abaixo, a **logo PNG íntegra** em tamanho que permita ler a assinatura. Sem CTA inventado. | Aparecimento coordenado por máscara suave (data → título), logo como imagem integral por fade/scale proporcional mínimo; manter ao menos 2,5 s de leitura estável. Respeitar área segura de Reels. | Trilha assenta em acorde calmo; um micro-swell discreto se necessário; cauda de 0,5–1 s, sem locução. |
 
-**Transição:** deslocamento da câmera pelo concreto até revelar alturas da infraestrutura; transição contínua, não corte para slide.
+**Nota de sincronização:** os pontos 00:09.65, 00:12.05, 00:15.70, 00:20.70, 00:26.85 e 00:32.55 resultam de pausas perceptíveis no envelope de voz e **precisam de revisão ouvindo a palavra real**. A janela do final deve iniciar só após o término real do MP3 (35,474 s), não aos 35,0 s se a palavra ainda estiver soando. Não cortar a última sílaba. Se a leitura da cartela exigir 4,5–5 s, estender a duração total; nunca acelerar narração para caber no tempo.
 
-### CENA 02 — O que há no poste | aprox. 5,91–11,32 s
+## E. Direção sonora detalhada
 
-**Imagem:** câmera sobe e acompanha conjuntos de cabos. Mostrar com clareza **rede de distribuição elétrica no arranjo superior** e **cabos de telecomunicações na faixa inferior**, com separação espacial coerente. Uma sobreposição técnica discreta destaca ambos, mantendo concreto, céu e chuva no mundo real. Etiquetas `Rede elétrica` / `Cabos de internet` devem apontar para conjuntos corretos. Evitar interseções ou contatos físicos inventados entre redes.
+- **Locução:** protagonismo absoluto e inteligibilidade. Preservar o arquivo aprovado como fonte sem edição destrutiva. Medir loudness integrado e true peak; normalizar no estágio de mixagem por ganho global transparente e limitar picos, sem comprimir de maneira agressiva. Trabalhar com voz central.
+- **Trilha original ou licenciada:** ambient cinematográfico/orgânico contemporâneo, minimalista, sensação de atenção → clareza → cuidado. Pulsação leve em **~70–88 BPM** é um ponto de partida criativo, não uma regra fisiológica nem imitação de frequência cardíaca. Texturas: piano filtrado/esparso, pad orgânico morno, elemento percussivo seco e raro; sem cordas melodramáticas, sem suspense, sem arpejos tecnológicos genéricos. Energia baixa, progressão perceptível, conclusão resolvida. Sem uso de música comercial sem prova de licença.
+- **SFX 1 (00:01–00:02 aprox.):** um impulso surdo e curto, físico, com ataque leve e cauda curta (100–260 ms), para destacar a pausa da atividade. **Não** empregar sequência acelerada de batimentos ou som de monitor hospitalar.
+- **SFX 2 (00:05–00:09):** fricção de papel/interface analógica, textura macia, em sintonia com as 3 anotações. Nunca soar como notificações falsas de prontuário.
+- **SFX 3, 4, 5 (00:10, ~00:13, ~00:17–19):** ticks/snaps discretos nos encaixes de 01/02/03, com pequenas diferenças de timbre, não uma repetição mecânica do mesmo efeito.
+- **SFX 6 (~00:21):** um leve `fold`/deslize de papel que unifica as notas e conduz ao atendimento.
+- **SFX 7 (encerramento):** swell ou respiração musical de resolução ao mostrar a data; evitar impacto grave ou logo stinger excessivo.
+- **Ambiência:** em cena cotidiana e atendimento, manter baixa, plausível e contínua; crossfades em vez de cortes duros. Se usar footage mudo, pode construir camada própria de room tone licenciado.
+- **Mixagem:** voz sobre trilha/sfx com ducking dinâmico, controle de masking na faixa média e picos. Meta preliminar de streaming: true peak final ≤ -1 dBTP, loudness integrado aproximadamente -16 a -14 LUFS (ajustar à voz e à plataforma; verificar com medição, não no ouvido apenas). Conferir mono-compatibilidade, transientes e se a última sílaba continua intacta.
+- **Se criar sons via ElevenLabs Sound Effects:** gerar assets separados, revisar licença e registrar prompt, versão e arquivo. Exemplos de prompts: `single muted organic tactile pulse, soft low-mid thump, understated, no medical monitor beep, isolated dry sound, 0.2 seconds`; `gentle realistic paper note slide, minimal airy swish, no UI beep, isolated, 0.4 seconds`; `soft editorial kinetic type lock-in, tiny warm paper click, subtle, 0.15 seconds`; `warm minimal airy transition swell resolving softly, 0.7 seconds, no dramatic riser`.
 
-**Movimento:** parallax de camadas, microajuste de foco e recuo breve para contextualizar. Não mostrar imagens documentais falsas de empresa ou equipamentos específicos.
+## F. Implementação e montagem
 
-**Som:** um deslocamento espacial curtíssimo da chuva ao acompanhar a câmera; textura musical sutil de descoberta; sem choque, chiado elétrico ou zumbidos que façam parecer uma falha ativa inexistente.
+1. **Auditoria:** `ffprobe` da locução; hashes SHA-256; inspeção da imagem logo RGBA. Criar `reports/assets-audit.json` com nomes, dimensões, hashes, durações e origem/licença. Guardar MP3 original intocado.
+2. **Timing:** gerar forma de onda e mapa de pausas em intervalos de 10–30 ms, escutar cada fronteira e fazer alinhamento por frase. Criar `src/timing.ts` ou `data/timing.json` com `start`, `end`, `text`, `confidence`, `verifiedByListening`; não afirmar sincronização perfeita com base apenas no texto.
+3. **Estrutura modular:** composições com cada cena como módulo isolado e parametrizável; design tokens, safe-area, `Audio`, animações com `spring`/`interpolate` (Remotion se disponível). Separar `BrandLogo` como **imagem externa íntegra**, `Typography`, `NoteMarker`, `Narration`, `SoundCue`, `EndCard`. Toda copy em UTF-8 e preferencialmente em objeto de dados para revisão literal.
+4. **Fotografia/B-roll:** se encontrar footage com licença comercial comprovada, usar em cenas 01, 04, 06/07. Priorizar consistência de personagem, luz e espaço. Se não encontrar footage apropriado/licenciado, construir cenas visuais originais com mãos/objetos abstratos/3D minimalista e grafismos, sem fingir representar atendimento real. Geradores de imagem podem apoiar fundos/objetos, **nunca** redesenhar a logo ou inventar equipe real. Registrar origem e direitos. Não copiar referências de outras marcas.
+5. **Movimento:** trabalhar em planos de câmera e grupos de elementos com suavidade, overshoot mínimo, easing orgânico. Evitar wipe de catálogo, glitch, bounce exagerado, ícones 3D genéricos, 3D anatômico enganoso ou card após card. Nos cortes, usar correspondência entre marcador/círculo/nota para garantir progressão.
+6. **Layout:** considerar que Instagram cobre porções da área superior/inferior. Zona funcional inicial: centro útil aproximadamente y = 250–1560 px em 1080×1920 para títulos críticos, ajustável após teste na interface; cartela final sem conteúdo essencial grudado ao rodapé. Testar em preview mobile em tamanho real e na miniatura. Fundo final claro para logo verde; conservar alpha.
+7. **Exportação:** vídeo master `output/CEMESC_Palpitacoes_12Nov_1080x1920_v01.mp4`, 30 fps, H.264 High Profile, yuv420p, bitrate VBR adequado ao detalhe (~12–20 Mb/s), audio AAC 48 kHz 256–320 kb/s, faststart; duração final determinada pela cartela. Prévia inicial `output/CEMESC_Palpitacoes_preview_00-12s_v01.mp4` com **áudio real + SFX + trilha provisória licenciada ou original**, e vídeo storyboard. Produzir projeto editável e um pequeno quadro/EDL dos cortes.
+8. **Projeto:** salvar código, arquivo(s) de configuração, lista de dependências, licenças e `README_PRODUCAO.md` com comandos exatos para prévia, master e QA. Não substituir o MP3 original. Não versionar renders finais pesados no repositório por padrão.
 
-### CENA 03 — Riscos: o que a câmera revela | aprox. 11,32–21,7 s
+### Estado atual do pacote
 
-**Imagem:** continuidade do poste. Vento atua sobre chuva, galhos distantes e cabos com movimentos fisicamente plausíveis, sem oscilação extrema caricata. Macro breve de superfície molhada; céu de tempestade com possibilidade de clarão **distante na nuvem**, nunca descarga conectada ao poste. Criar três descobertas sequenciais sincronizadas às palavras correspondentes: `Vento`, `Umidade`, `Descargas atmosféricas`. São fatores de risco, não afirmações de causa específica de falha da internet.
+Este repositório `acmarketingcomercial-coder/HD` foi reutilizado com autorização do cliente, substituindo briefing e assets da campanha anterior. **Não reutilizar logo JVX, narração JVX, paleta JVX, mascote ou código de cliente anterior.** O backup da versão anterior está na branch `backup-jvx-antes-cemesc-20261112`. Os dois arquivos reais listados na seção B devem estar presentes na pasta `assets/` da branch principal; se não estiverem, reportar imediatamente. O repositório está **público**: avaliar privacidade de arquivos e licenças antes de compartilhar links publicamente.
 
-**Movimento:** travelling e pequenas mudanças de perspectiva; evitar três telas diferentes. Priorizar a continuidade do mesmo ambiente. A câmera investiga; os overlays aparecem apenas quando necessários.
+## G. QA e conformidade — critérios de aceite
 
-**Som:** vento cresce controladamente, chuva ganha largura, trovão distante e espaçado. Um whoosh leve para transição de foco, sem pacote de impactos cinematográficos. Manter a voz inteligível.
+**Bloqueadores / REPROVADO:** logo reconstituída/recolorida/cortada; texto com erro; “Na CEMESC” em vez de “No CEMESC”; locução trocada/cortada; imagem de pessoa sintética apresentada como profissional da CEMESC; data/título final incorretos; claims médicos inventados; vídeo incompleto; artefatos anatômicos graves; asset sem direito de uso comercial publicado como se licenciado; duração que elimine fala.
 
-### CENA 04 — Decisão: segurança primeiro | aprox. 21,7–30,57 s
+**Ajustar:** texto minúsculo ou sob UI; animações com velocidade sem relação com voz; recortes/máscaras vazando; cards repetidos; transições que não se conectam; trilha cobrindo a fala; impacto sonoro excessivo; cartela ilegível; falta de diferenciação entre cenas; fundo que reduz contraste do logo.
 
-**Imagem:** a câmera desacelera e deixa de se aproximar. As informações técnicas se recolhem e a infraestrutura volta a aparecer como um conjunto, ainda sob chuva. Sugerir decisão responsável sem mostrar técnico real fazendo atividade insegura, sem encenar acidente. Uma pequena transformação gráfica funcional transmite pausa de intervenção; nada de grande selo de “proibido” ou promessa de prazo. Mostrar texto aprovado `Segurança em primeiro lugar.` com dimensão adequada, sem gritar visualmente.
+**Aprovável para revisão humana, nunca aprovado automaticamente:** todos os textos literalmente conferidos; hash de voz/logo verificados; visual distinto e consistente; cartela legível; mixagem equilibrada; ausência de diagnósticos implícitos; direitos de uso documentados; sincronização conferida com áudio final. Publicidade médica e conteúdo clínico exigem revisão aplicável do responsável antes da publicação.
 
-**Mensagem:** a análise de risco determina se uma intervenção externa pode ocorrer; não existe regra universal de que qualquer chuva proíbe todo trabalho. Não formular conclusão mais absoluta que o áudio.
+### Testes objetivos obrigatórios
 
-**Som:** reduzir a tensão musical e a proximidade da chuva na frase principal, criando silêncio **relativo**, não corte artificial da ambiência, e sem cortar a voz. Preservar som distante de chuva ao fundo.
+- Comparar linha a linha locução textual e gravação, sinalizar divergência com timestamp.
+- Verificar enquadramento 1080×1920, 30 fps, ausência de barras/crop inesperados.
+- Extrair frames em 1 s, 3 s, 7 s, 11 s, 14 s, 18 s, 22 s, 29 s, 34 s, 36 s e 38 s; verificar texto e hierarquia visual.
+- Checar legibilidade das três perguntas em tela mobile e da cartela do Dia Nacional.
+- Conferir a logo inteira, incluindo slogan, na cena final (tamanho que permita leitura).
+- Observar face/mãos/objetos quadro a quadro; nenhum morphing estranho ou equipamento fabricado.
+- Revisar cortes e áudio de 0 a 1 s, fronteiras de cena e 34 a 40 s, sem cliques nem sílabas truncadas.
+- Medir `ebur128`/loudnorm, true peak e coerência da mixagem; checar trilha sob fala, e a cauda.
+- Guardar `reports/qa_report.md` com classificação APROVÁVEL/AJUSTAR/REPROVADO, motivos observáveis, timestamps e instruções de correção.
 
-### CENA 05 — Do outro lado da chuva | aprox. 30,57–40,40 s
+## H. Fluxo de aprovação obrigatório
 
-**Imagem:** a câmera se afasta do poste, cruza o exterior molhado e chega à vista de uma janela residencial. Transição para um interior simples e acolhedor, sem pessoas identificáveis, sem cenário publicitário artificial. A chuva vista através do vidro comunica a espera do cliente; a lembrança do poste comunica a segurança do profissional. Não inserir personagens gerados com uniformes JVX nem fotografias que se passem por equipe real.
+**Fase 1 — Validação do pacote e storyboard operacional:** auditar materiais, confirmar/corrigir alinhamento temporal por escuta e listar B-roll/trilha/SFX adicionais e suas licenças. Nenhum conteúdo médico adicional sem revisão.
 
-**Movimento:** continuidade espacial plausível: enquadramento da rua → janela → interior; reduzir a velocidade e deixar respirar. O tom muda de tenso para acolhedor.
+**Fase 2 — Prévia audiovisual curta:** produzir SOMENTE os primeiros ~12 segundos (gancho, `3 informações` e início do ponto 1) em 1080×1920 **com áudio**, tipografia, movimentos e som suficientes para validar a linguagem. Entregar vídeo, 3 frames-chave e nota de escolhas criativas/limitações. **Aguardar a aprovação explícita do responsável.**
 
-**Som:** transição acústica exterior/interior: chuva alta e aberta fica abafada pelo vidro, grave do vento desaparece aos poucos; trilha muda para harmonia quente sem triunfalismo. Sem som falso de conexão “voltando” ou prazo implícito de resolução.
+**Fase 3 — Master condicionado ao aceite:** somente após aceite, compor todo o filme usando o áudio original, revisar timing, aplicar revisão clínica/publicitária, mixar, renderizar e fazer QA. Não chamar um vídeo de aprovado sem confirmação humana.
 
-### CENA 06 — Assinatura institucional | aprox. 40,40 s → final (~47–49 s)
+**Fase 4 — Correções locais:** preservar partes aprovadas; registrar timestamp, região, mudança e invariantes; corrigir layer/component, não regenerar filme inteiro. Reinspecionar antes/depois.
 
-**Imagem:** a chuva da janela e a iluminação ambiente se integram em um degradê **navy → azul** sutil. Entrar o **A-003_JVX_Logo_Oficial.png original** quando a voz disser “Internet JVX.”; manter anel, cores, efeitos e proporções reais. Em seguida, slogan literal `Internet que não te deixa na mão.` em Poppins com boa hierarquia e contraste. **Não colocar número de WhatsApp nem botão**: não aprovados para esta campanha. Não usar o símbolo de escudo como logo alternativa.
+## Entregáveis esperados
 
-**Movimento:** pequenos movimentos de posição/escala uniforme e fade bem controlados; sem deformar a logo, sem giros, halos e pulsação. Final de marca legível após a última palavra por 1,5–3 s, com trilha resolvendo naturalmente.
+1. Projeto editável e instruções de execução.
+2. `output/CEMESC_Palpitacoes_preview_00-12s_v01.mp4` para aprovação inicial.
+3. Storyboard/timing validados e relatório de ativos/licenças.
+4. Após aprovação explícita: MP4 master vertical, report QA, EDL de cenas e thumbnails de referência.
+5. Não publicar em rede social nem declarar aprovação final sem comando do responsável.
 
-**Som:** assinatura tonal original curta e discreta, com finalização quente. A chuva decai de forma natural; não usar um grande impacto de trailer. Sem silêncio abrupto no corte final.
-
-## 6. Sound Design — papel central da narrativa
-
-**Objetivo:** a chuva é personagem sonora. Ela muda de distância, material, ambiente e intensidade conforme a câmera se move. O resultado deve soar profissional e natural, mais próximo de um filme editorial do que de um pacote de efeitos aleatórios.
-
-**Camadas sugeridas:**
-1. Chuva externa ambiente (estéreo coerente) e água no concreto, com textura sem repetição perceptível.
-2. Pingos próximos pontuais apenas quando há close concreto/vidro.
-3. Vento com variação gradual, sem mascarar a voz.
-4. Trovão distante 1–2 ocorrências justificadas; nunca representar descargas atingindo a estrutura.
-5. Deslocamentos sonoros sutis da câmera e dos overlays técnicos.
-6. Trilha musical **original ou comprovadamente licenciada para uso comercial**: início investigativo, tensão moderada, pequena redução na frase “Segurança em primeiro lugar.”, resolução acolhedora. Preferir poucos elementos acústicos com dinâmica, não bateria/drum loop dominante.
-7. Assinatura tonal breve no nome JVX e fechamento com reverb/tail suave.
-
-**Mixagem:** voz central e sempre prioritária; usar sidechain ou automação manual de níveis da música/ambiente sob a voz. Evitar competições na faixa de inteligibilidade vocal. Mixar em WAV (48 kHz recomendado), preservando o MP3 original intacto. Estéreo pode ser construído ao redor da voz mono sem duplicações com delays audíveis. Meta inicial para master social: cerca de **−16 LUFS integrados** e **true peak até −2 dBTP**; ajustar após escuta e medições, sem sacrificar naturalidade ou esmagar a dinâmica. Registrar resultados reais, não supor.
-
-### Earshot — usar se estiver disponível, sem bloquear a produção
-
-Fonte e documentação: `https://github.com/Leonxlnx/earshot` (biblioteca CLI/MCP; checar README atual antes de executar). Verifique `uv`, FFmpeg e permissões de instalação. **Não instalar pacotes não verificados silenciosamente.** Preferir efeitos da biblioteca/preset quando adequados; `forge` apenas para um efeito que realmente precise de síntese específica. Para chuva e trovão naturalmente convincentes, gravações ambiente com licença comercial verificada são preferíveis a efeitos digitais artificiais.
-
-```bash
-# Executar apenas se instalação e política do ambiente permitirem
-uv tool install "earshot[mcp] @ git+https://github.com/Leonxlnx/earshot"
-earshot doctor
-
-# Kit curto e discreto para filme guiado por narração
-earshot kit init --preset calm -o audio/kit.json
-earshot kit render audio/kit.json --out audio/kit
-
-# Descoberta/medição — selecionar IDs reais da versão instalada
-earshot sfx list
-earshot measure audio/mix_preliminar.wav
-# earshot timeline audio/mix_preliminar.wav --video previews/preview_total.mp4
-# earshot critique previews/preview_total.mp4
-```
-
-**Atenção:** `earshot critique` compara com um perfil de vídeos de lançamento; interpretar observações como diagnóstico auxiliar, não impor estética de trailer/publicidade de produto. `forge` pode ser usado após ler a sintaxe da versão instalada, por exemplo `earshot forge whoosh --target "a subtle soft camera pass-through whoosh" --dir audio/forge/whoosh`, mas **não** é necessário se um whoosh da biblioteca funcionar. Não depender de downloads de modelos se o ambiente for restrito; `sfx`, `kit` e medidas via FFmpeg são suficientes para um pipeline básico.
-
-**Mídia licenciada:** nenhum SFX, música, chuva ou referência de outro vídeo pode ser usado automaticamente sem rastrear fonte, autor e licença. Não confundir licença MIT do código Earshot com licença de terceiros ou modelos. Criar `ASSET_MANIFEST.md` com licença, URL, atribuição requerida, data de conferência e limitações. Nenhuma publicação comercial final enquanto houver recurso externo sem licença confirmada. Áudio ElevenLabs fornecido: verificar com o cliente o direito comercial conforme plano/termos da conta; não presumir autorização só porque o arquivo existe.
-
-## 7. Precisão técnica, segurança e não ficção documental
-
-O filme é educativo. **Não ensinar operações em postes ou procedimentos elétricos**. As referências de segurança são a NR-10 (riscos elétricos) e NR-35 (trabalho em altura), mas não transformar o filme em instrução normativa ou fazer citações jurídicas em tela. Em novembro/2026, tomar cuidado com a versão temporal das normas: nova redação de NR-10 publicada em 2026 tem vigência indicada para 01/06/2027; consultar texto **vigente** ao verificar regras. A legislação e procedimentos do empregador não devem ser inferidos de modo simplista.
-
-Referências públicas para checagem editorial, **não** para uso visual automático:
-- NR-10: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/norma-regulamentadora-no-10-nr-10
-- NR-35: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/norma-regulamentadora-no-35-nr-35
-
-**Proibido alegar:** “toda chuva paralisa o serviço”; “a fibra para de funcionar porque molhou”; “todo poste representa risco de choque em chuva”; “a JVX sempre suspende ou retoma em X minutos”; “a JVX utiliza este procedimento operacional”; “temos técnicos/instalações como mostrado no vídeo”; qualquer promessa de serviço ininterrupto. Não dramatizar choque, raio atingindo cabo, acidente, corpo em queda ou salvamento inventado.
-
-## 8. Implementação e estrutura de código
-
-**Pipeline preferencial:** Remotion 4/React/TypeScript, fontes Poppins locais, animações com curvas controladas, FFmpeg/ffprobe para inspeção e finalização de áudio; Earshot opcional para efeitos e análise. Use ferramentas adicionais apenas se realmente disponíveis e úteis. Respeite a licença de Remotion aplicável à organização antes de publicação comercial (conferir `https://www.remotion.dev/docs/license/pricing`).
-
-**Estrutura sugerida (adaptável):**
-
-```text
-jvx-perigo-chuva/
-  README.md
-  package.json
-  src/
-    index.ts
-    Root.tsx
-    Film.tsx
-    design/tokens.ts
-    timeline/cues.ts
-    scenes/Scene01_RainHook.tsx
-    scenes/Scene02_Infrastructure.tsx
-    scenes/Scene03_WeatherRisks.tsx
-    scenes/Scene04_SafetyPause.tsx
-    scenes/Scene05_HumanSide.tsx
-    scenes/Scene06_Brand.tsx
-    components/
-  public/assets/
-    Narracao_JVX_Chuva_Roberta_Oficial.mp3
-    A-003_JVX_Logo_Oficial.png
-  audio/
-    music/
-    ambience/
-    sfx/
-    kit.json
-    stems/
-  production_notes/
-    timeline_alinhada.csv
-    ASSET_MANIFEST.md
-    QA.md
-    qa_measurements.json
-  previews/
-  output/
-    JVX_O_Perigo_Que_Voce_Nao_Ve_V1.mp4
-    storyboard_contact_sheet.png
-```
-
-- Usar componentes separados por cena, coordenados por uma timeline mestre **baseada nos tempos reais** do áudio. Preferir durações em frames arredondadas consistentemente; 30 fps. Picos de som sincronizados à ação visível, medidos em frames.
-- Preservar original de voz/logo e todos os assets; nunca substituir os arquivos mestres.
-- Renderização reprodutível com scripts npm claros (`dev`, `render`, `qa`) e instruções de instalação.
-- Separar `voice`, `rain`, `wind/thunder`, `music`, `sfx` em stems, para permitir revisões cirúrgicas. O master contém **uma única** instância de voz.
-- Não usar o repositório `acmarketingcomercial-coder/HD` ou o código de “Travou” como destino por padrão; são projetos diferentes. Se o ambiente apontar para um repositório antigo, crie nova pasta ou branch específica e preserve tudo existente.
-- Não subir voz, logo, assets de terceiros ou materiais internos para repositório **público** sem autorização explícita. Preferir privado, remover tokens/segredos e ignorar caches e dependências no Git.
-
-## 9. Plano operacional — executar integralmente
-
-**A. Preflight:** inventariar assets, calcular hashes, checar instalação de Node, Remotion, FFmpeg, fontes, ferramentas auxiliares e condições de licença. Abrir o áudio real e detectar duração. **Não pedir novos assets já fornecidos.**
-
-**B. Alinhamento:** inspecionar a narração por escuta ou ASR/alinhamento, comparar o texto com a referência aprovada e criar `timeline_alinhada.csv` com confiança e marcações de início/fim. **Nenhum outro TTS.**
-
-**C. Design de ambientes:** selecionar/produzir imagens-base realistas legitimamente utilizáveis. Validar coerência de poste, níveis de cabos, chuva, iluminação, interior e composição. Não começar pelo texto sobre fundo azul.
-
-**D. Motion Design:** implementar seis cenas com continuidade espacial de câmera, cada uma com ações específicas; sem composições desconectadas ou cards repetidos. Gerar storyboard contact sheet e renderizar pequenos trechos de teste para inspecionar o primeiro gancho, a revelação dos cabos, riscos e a assinatura. Não é necessário solicitar aprovação intermediária: conclua a V1 no mesmo trabalho, salvo bloqueio real de asset/segurança.
-
-**E. Som:** organizar trilha, chuva, vento, trovão, transições e assinatura; automatizar níveis sob a voz; usar Earshot se disponível; escutar/verificar os resultados, não apenas ler um score. Documentar fontes/licenças e sincronização.
-
-**F. Render:** gerar master final 1080×1920, 30 fps, H.264 (perfil compatível), `yuv420p`, BT.709, AAC estéreo, `+faststart`. Preferir boa qualidade visual (por exemplo CRF 18–20 com libx264, se apropriado ao pipeline), evitando banding nas áreas navy e degradação em chuva/textos. Uma cópia de distribuição pode ser mais compacta, mas não substitui o master de qualidade.
-
-**G. QA:** analisar o MP4 **real** pós-render e reportar dados medidos, não resultados presumidos. Inspecionar frames nos 6 segmentos e nas transições. Testar legibilidade em escala de smartphone, áudio com e sem fones se houver possibilidade, contraste, assets, estrutura técnica, duração real e segurança das alegações. Produzir versão final e pacote editável.
-
-## 10. Checklist de aprovação (APROVÁVEL / AJUSTAR / REPROVADO)
-
-1. **Narração:** arquivo certo 44,826063 s, uma instância, sem fala cortada, sem mudança de velocidade/pitch/timbre; alinhamento evidenciado por dados e, idealmente, escuta.
-2. **Copy:** cada palavra da locução preservada; textos de tela apenas os autorizados, sem CTA/invenções.
-3. **Identidade:** Poppins real; cores corretas; logo A-003 original como camada real (hash verificado); nenhum mascote.
-4. **Técnica:** poste, rede elétrica e cabos de internet com disposição plausível; chuva e descargas sem fenômenos inventados; trabalho externo retratado como sujeito a avaliação de risco, sem regra universal falsa.
-5. **Realismo e ritmo:** poste e ambiente profissionais; chuva fluida e convincente; seis etapas narrativas reconhecíveis; uma câmera que investiga e depois recua, sem maquete infantil ou slides estáticos.
-6. **Texto:** áreas seguras; tamanho adequado no celular; nenhum rótulo ligado ao cabo errado; contraste suficiente sobre chuva.
-7. **Sound design:** chuva espacial coerente, vento e trovão naturais, música sem mascarar voz; efeitos com função, sem excessos; fechamento acolhedor; nenhum recurso de licença duvidosa liberado para veiculação.
-8. **Export:** 1080×1920, 30fps, H.264, AAC, `yuv420p`, `+faststart`, sem frames vazios e sem falhas de render; qualidade de compressão adequada.
-9. **Documentação:** manifestos de direitos, tempo das falas/cues, relatórios, versões, projeto fonte reprodutível e arquivos disponibilizados efetivamente.
-
-**REPROVAR** se houver logo falsa/alterada, frase omitida ou alterada, narração substituída, cenas com risco elétrico tecnicamente enganoso, fonte substituída, defeito de corte/legibilidade, ou publicação comercial com mídia sem autorização. **AJUSTAR** para problemas de estética, sincronismo pontual ou timbre que não invalidem a estrutura, documentando precisamente tempos/cenas. Nunca afirmar “aprovado” sem inspecionar o arquivo renderizado.
-
-## 11. Entregáveis obrigatórios
-
-1. `output/JVX_O_Perigo_Que_Voce_Nao_Ve_V1.mp4` — vídeo completo com narração, trilha e SFX.
-2. `output/storyboard_contact_sheet.png` — frames representativos das seis cenas, inclusive encerramento.
-3. `production_notes/timeline_alinhada.csv` — alinhamento com método e confiança.
-4. `production_notes/ASSET_MANIFEST.md` — origem, autor, licença e permissão comercial de cada recurso (incluindo voz).
-5. `production_notes/QA.md` e `qa_measurements.json` — avaliação visual/sonora/técnica com o que realmente foi medido e pendências de escuta/licenças.
-6. Código Remotion/TypeScript editável, configs, arquivos de projeto, stems de áudio e instrução reprodutível de render.
-7. Pacote ZIP para transferência, **sem omitir assets essenciais**, ou commit em repositório privado autorizado, com links e nomes efetivamente verificados. O ambiente de execução pode ser temporário: não prometer permanência de arquivos remotos.
-
-**Entrega sem exageros:** se faltar ferramenta/licença, registrar exatamente a limitação, produzir a melhor V1 possível e não rotular pendência como resolvida. Não interromper a execução por ajustes estéticos desnecessários; completar as seis cenas e avaliar o master.
-
-## 12. Comando final de execução
-
-**Execute integralmente este briefing em um projeto novo e editável. Use a narração oficial de 44,826063 segundos como timeline mestra, a logo A-003 original como asset real e a copy bloqueada. Produza as seis cenas e a mixagem com chuva narrativa, finalize o MP4, rode o QA e entregue o código e os arquivos. Priorize uma produção cinematográfica realista e humana, tecnicamente responsável, sem slides genéricos, acidentes fictícios, áudio não licenciado ou promessas comerciais.**
+**Ordem imediata ao Claude Code:** leia tudo, valide MP3 e logo por hash, monte o projeto e gere a prévia audiovisual 0–12 s. Mostre os resultados verificáveis e as pendências. Interrompa antes da renderização completa até receber aprovação.
