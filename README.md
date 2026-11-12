@@ -2,27 +2,25 @@
 
 Projeto de produção audiovisual para Claude Code.
 
-## Arquivo principal
+## Comece por aqui
 
-Leia **[PROMPT_CLAUDE_CODE.md](./PROMPT_CLAUDE_CODE.md)** integralmente. O documento contém briefing, identidade visual, roteiro, storyboard, direção sonora, requisitos técnicos e critérios de aprovação.
+Leia **[PROMPT_CLAUDE_CODE.md](./PROMPT_CLAUDE_CODE.md)** integralmente. O documento contém briefing, roteiro, storyboard, direção de arte, mapa de som e etapas de QA.
 
-## Recursos oficiais obrigatórios
+## Assets enviados à raiz do repositório
 
-Os arquivos binários abaixo **ainda precisam ser enviados à pasta `assets/`**:
+- **[Narracao_JVX_Roberta.mp3](./Narracao_JVX_Roberta.mp3)** — áudio original ElevenLabs, ~60,92 s. Preserve sem alteração.
+- **[Logo_JVX_Oficial.png](./Logo_JVX_Oficial.png)** — logotipo oficial transparente. Não redesenhar nem recolorir.
+- **[MANIFEST.json](./MANIFEST.json)** — manifesto de origem.
+- **[MARCADOR_DE_CENAS_PROVISORIO.csv](./MARCADOR_DE_CENAS_PROVISORIO.csv)** — marcações estimadas, NÃO tempo de fala verificado.
 
-- `assets/Narracao_JVX_Roberta.mp3` — locução ElevenLabs aprovada, duração 60,9175 segundos.
-- `assets/Logo_JVX_Oficial.png` — marca oficial intacta com transparência.
+Há também notas em `production_notes/`, mas os arquivos essenciais do pacote já estão na raiz. Quando necessário, copie o áudio e a logo para `public/assets/` do projeto sem modificar seus bytes.
 
-Ambos estão no pacote ZIP disponibilizado no ChatGPT. Não substitua o áudio por nova locução nem recrie a logo.
-
-**ATENÇÃO:** o repositório está configurado como **PÚBLICO**. Antes de enviar voz e identidade da campanha, avalie mudar a visibilidade em **Settings → General → Danger Zone → Change repository visibility → Private**.
+> **PRIVACIDADE:** O repositório foi verificado como **PUBLIC** em 11/11/2026. Os assets enviados ficam expostos. Para restringir acesso: Settings → General → Danger Zone → Change repository visibility → Private.
 
 ## Instrução para Claude Code
 
-> Leia `PROMPT_CLAUDE_CODE.md` e confira os arquivos oficiais em `assets/`. Analise a locução e marque tempos reais das frases. Produza primeiro uma prévia audiovisual de 12–18 segundos com motion design e sound design. Aguarde minha aprovação antes do render completo. Não transforme o vídeo em slides animados e não altere a copy nem a logo.
+Leia integralmente `PROMPT_CLAUDE_CODE.md`. Inspecione os arquivos originais de áudio e logo que estão na **raiz** do repositório. Faça o alinhamento real da narração com as 10 cenas, mantenha copy e marca intactas e produza primeiro uma prévia audiovisual de 12–18 segundos, com movimento, trilha e efeitos. Não substitua a direção por slides animados. Aguarde aprovação antes do render completo.
 
-## Observações
+## Formato
 
-- Vídeo final previsto: vertical 1080×1920, 30 fps, duração estimada 62–64 segundos.
-- O mapa de cenas do prompt é provisório; o áudio final é a referência de sincronização.
-- Este repositório, neste momento, contém **o prompt**, mas **não os dois assets obrigatórios**.
+Vertical 1080×1920, 30 fps, duração final estimada 62–64 s, condicionada à sincronização com o áudio de 60,9175 s.
