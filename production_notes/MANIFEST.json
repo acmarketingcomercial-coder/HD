@@ -1,0 +1,17 @@
+{
+  "project": "Internet JVX - Travou. Mas onde está o problema?",
+  "audio_duration_seconds": 60.9175,
+  "assets": [
+    {
+      "path": "assets/Narracao_JVX_Roberta.mp3",
+      "size_bytes": 991617,
+      "sha256": "74a099fc0504ec1321b4e1e822b2d095a42d265e0b402463ade485a0fe5a9a50"
+    },
+    {
+      "path": "assets/Logo_JVX_Oficial.png",
+      "size_bytes": 282537,
+      "sha256": "39428239d6fe9f58348e5d2e89b5669c3dc678e6eff0d6a36f4d04255c350668"
+    }
+  ],
+  "note": "Cenas são janelas provisórias por pausas na forma de onda, não timestamps de fala verificados."
+}
