@@ -1,0 +1,11 @@
+cena,inicio_estimado_s,fim_estimado_s,texto_na_tela,confianca
+01,0.00,3.27,TRAVOU?,baixa-sem_alinhamento_semantico
+02,3.27,8.31,Vamos investigar.,baixa-sem_alinhamento_semantico
+03,8.31,14.64,Só um aplicativo?,baixa-sem_alinhamento_semantico
+04,14.64,21.55,Só neste aparelho?,baixa-sem_alinhamento_semantico
+05,21.55,29.63,Distância · Paredes · Interferências,baixa-sem_alinhamento_semantico
+06,29.63,40.13,Até no cabo?,baixa-sem_alinhamento_semantico
+07,40.13,44.74,Mesmo sintoma. Causas diferentes.,baixa-sem_alinhamento_semantico
+08,44.74,51.45,Entenda antes de tentar resolver.,baixa-sem_alinhamento_semantico
+09,51.45,56.75,Precisou de ajuda?,baixa-sem_alinhamento_semantico
+10,56.75,60.92,Internet que não te deixa na mão.,baixa-sem_alinhamento_semantico
