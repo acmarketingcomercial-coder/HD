@@ -2,7 +2,7 @@
   "project_id": "SA-OVERBOOKING-MOTION-20261113-v1",
   "client": "Souza & Andrade Advogados Associados",
   "concept": "O assento que não existia",
-  "status": "Conceito e voz aprovados; direção de lettering para prévia; master depende de aprovação e validação jurídica",
+  "status": "V04 0–12s liberada para continuidade em 13/11/2026; MASTER autorizado apenas para revisão, não para publicar",
   "spec": {
     "w": 1080,
     "h": 1920,
@@ -18,11 +18,11 @@
     }
   },
   "voice": {
-    "path": "assets/LOCUCAO_SOUZA_ANDRADE_OVERBOOKING_APROVADA.mp3",
+    "path": "assets/ElevenLabs_2026-11-13T06_10_46_Davi Andrei_pvc_s50_sim75_cs14_v4.mp3",
     "sha256": "8afb9877e732e99b86c2055d2b88036de6c3f7df4ac79a32556d483bd9909427",
     "bytes": 653906,
     "mp3": "mono, 44100Hz",
-    "github_status": "PENDENTE: presente no ZIP local, não no repo"
+    "github_status": "PRESENTE na main sob este nome, size 653906; hash esperado do original indicado acima"
   },
   "logo": {
     "path": "assets/LOGO_OFICIAL_SOUZA_ANDRADE.png",
@@ -35,7 +35,7 @@
       966,
       813
     ],
-    "github_status": "PENDENTE: presente no ZIP local, não no repo"
+    "github_status": "Original canônico LOGO_OFICIAL_SOUZA_ANDRADE.png NÃO localizado na main; arquivo 'assets/Logo Souza e Andrade.png' (500×200, 37426 bytes) ainda NÃO verificado como reprodução fiel do original. Validar antes do master."
   },
   "pauses_silence_seconds": [
     [
@@ -98,5 +98,14 @@
   "timing_note": "Silêncios medidos; NÃO equivalem a tempos exatos das palavras. Executar alinhamento/escuta.",
   "backups": "backup-cemesc-antes-souza-20261113",
   "repository_visibility": "PUBLIC",
-  "legal_approval": "obrigatória"
+  "legal_approval": "obrigatória",
+  "approved_preview": {
+    "path_expected": "SA_Overbooking_PREVIA_0-12s_v04.mp4",
+    "duration_seconds": 12,
+    "sha256": "0c32b9d76ff2d54d1a3704793feefca7d1acc47b3d9fd6af045dfc2bc943e8f1",
+    "status": "TRAVADA; no arquivo recebido da agencia, não confirmada no repositorio",
+    "last_frame_index": 359
+  },
+  "next_instruction": "PROMPT_MASTER_APOS_V04.md",
+  "publication_authorized": false
 }
