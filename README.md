@@ -18,3 +18,7 @@
 > Leia `PROMPT_MASTER_APOS_V04.md` antes de executar. Preserve 0–12 s da V04, confira o MP3 e o logotipo oficial por SHA, desenvolva os 12–42 s em continuidade com a mesma identidade e sound design, gere o master MP4 **PARA REVISÃO**, forneça relatório de QA, e não publique.
 
 O repositório é **público**. Não subir dados confidenciais ou materiais sem licença. Campanha anterior preservada em `backup-cemesc-antes-souza-20261113`.
+
+
+### Conhecimento e continuidade
+- [Aprendizados aprovados do AC Motion Studio: Souza & Andrade (13/11/2026)](docs/AC_MOTION_STUDIO_APRENDIZADOS_SOUZA_ANDRADE_2026-11-13.md) — histórico da V01 à V04, masters V01–V02, regras gerais e específicas, arquivos/hash, aprovação criativa e pendências pré-publicação.
