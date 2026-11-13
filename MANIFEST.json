@@ -1,111 +1,87 @@
 {
-  "project_id": "SA-OVERBOOKING-MOTION-20261113-v1",
-  "client": "Souza & Andrade Advogados Associados",
-  "concept": "O assento que não existia",
-  "status": "V04 0–12s liberada para continuidade em 13/11/2026; MASTER autorizado apenas para revisão, não para publicar",
-  "spec": {
-    "w": 1080,
-    "h": 1920,
-    "fps": 30,
-    "format": "9:16",
-    "voice_seconds": 39.810563,
-    "approx_master_seconds": 41.9,
-    "safe": {
-      "left": 86,
-      "right": 86,
-      "top": 250,
-      "bottom": 400
+  "version": "1.0",
+  "generated_at": "2026-11-13",
+  "campaign": "Franciele Fotografias — Reserva Programada",
+  "video": "O carnê que vira fotografia",
+  "repo": "acmarketingcomercial-coder/HD",
+  "branch": "main",
+  "backed_up_previous_head": "58e4926c98efd839bd31d2d772ba5d5537275a18",
+  "backup_branch": "backup-hd-antes-franciele-20261113",
+  "master_audio_duration_seconds": 35.6465,
+  "proposed_video_duration_seconds": 36.2,
+  "fps": 30,
+  "frames": 1086,
+  "format": "1080x1920 9:16 MP4 H.264 AAC",
+  "no_text_overlays": true,
+  "voice_original_only": true,
+  "repository_binary_assets_status": "PENDENTE_DE_IMPORTACAO",
+  "note": "A atualização GitHub via conector inclui instruções textuais. Os binários originais estão no pacote ZIP disponibilizado ao usuário nesta conversa e precisam ser importados em assets/ antes da execução; não usar binários de outros clientes.",
+  "files": [
+    {
+      "path": "assets/narracao_franciele_reserva_programada_original.ogg",
+      "source": "original_upload",
+      "bytes": 83897,
+      "sha256": "17c09e3c53d1e8e69ead4809be1c5541669f7a04e0f8d8aea1a723d1589aee09",
+      "required": true,
+      "present_in_repo": false
+    },
+    {
+      "path": "assets/narracao_franciele_reserva_programada_master.wav",
+      "source": "ffmpeg_conversion",
+      "bytes": 3420894,
+      "sha256": "abe9323e17628ca958cee9198e0dedeb66ccf0cb2e2a0e42808d05cfe9bb07f7",
+      "required": false,
+      "present_in_repo": false
+    },
+    {
+      "path": "assets/logo_franciele_fotografias_original.png",
+      "source": "original_upload",
+      "dimensions": [
+        500,
+        150
+      ],
+      "bytes": 34080,
+      "sha256": "50f35b71ff00e6d050f0d215b47ee712bbac5a5c7cca28beca7763f2ea4bfc06",
+      "required": true,
+      "present_in_repo": false
+    },
+    {
+      "path": "assets/capa_carne_aberta_original.png",
+      "source": "original_upload",
+      "dimensions": [
+        500,
+        150
+      ],
+      "bytes": 141232,
+      "sha256": "2a0b4b6a530a110e31cdc899e622b314c635909fd3d47e95fe6243ae3aed5369",
+      "required": true,
+      "present_in_repo": false
+    },
+    {
+      "path": "assets/mockup_carne_3d_aprovado.png",
+      "source": "approved_generated_image",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "bytes": 2048446,
+      "sha256": "cb686e387427c9778772a2b720b745003854eeaabca372f612455ab7e515b933",
+      "required": true,
+      "present_in_repo": false
+    },
+    {
+      "path": "assets/foto_ensaio_real_autorizada.ext",
+      "source": "to_be_supplied_by_client",
+      "required_for_final": true,
+      "present_in_repo": false
     }
-  },
-  "voice": {
-    "path": "assets/ElevenLabs_2026-11-13T06_10_46_Davi Andrei_pvc_s50_sim75_cs14_v4.mp3",
-    "sha256": "8afb9877e732e99b86c2055d2b88036de6c3f7df4ac79a32556d483bd9909427",
-    "bytes": 653906,
-    "mp3": "mono, 44100Hz",
-    "github_status": "PRESENTE na main sob este nome, size 653906; hash esperado do original indicado acima"
-  },
-  "logo": {
-    "path": "assets/LOGO_OFICIAL_SOUZA_ANDRADE.png",
-    "sha256": "845fe31a67f6b2749fc216c82ea07d65f6d309c425cbc8424bfbc218dd472b1a",
-    "bytes": 59767,
-    "format": "RGBA, 1080x1350",
-    "bbox_visible": [
-      114,
-      537,
-      966,
-      813
-    ],
-    "github_status": "Original canônico LOGO_OFICIAL_SOUZA_ANDRADE.png NÃO localizado na main; arquivo 'assets/Logo Souza e Andrade.png' (500×200, 37426 bytes) ainda NÃO verificado como reprodução fiel do original. Validar antes do master."
-  },
-  "pauses_silence_seconds": [
-    [
-      1.03,
-      1.45
-    ],
-    [
-      2.08,
-      2.46
-    ],
-    [
-      3.63,
-      4.02
-    ],
-    [
-      5.03,
-      5.51
-    ],
-    [
-      7.4,
-      7.72
-    ],
-    [
-      10.39,
-      10.69
-    ],
-    [
-      17.23,
-      17.62
-    ],
-    [
-      19.34,
-      19.67
-    ],
-    [
-      23.86,
-      24.23
-    ],
-    [
-      26.85,
-      27.12
-    ],
-    [
-      29.74,
-      30.03
-    ],
-    [
-      34.87,
-      35.29
-    ],
-    [
-      36.23,
-      36.57
-    ],
-    [
-      39.51,
-      39.81
-    ]
   ],
-  "timing_note": "Silêncios medidos; NÃO equivalem a tempos exatos das palavras. Executar alinhamento/escuta.",
-  "backups": "backup-cemesc-antes-souza-20261113",
-  "repository_visibility": "PUBLIC",
-  "legal_approval": "obrigatória",
-  "approved_preview": {
-    "path_expected": "SA_Overbooking_PREVIA_0-12s_v04.mp4",
-    "duration_seconds": 12,
-    "sha256": "0c32b9d76ff2d54d1a3704793feefca7d1acc47b3d9fd6af045dfc2bc943e8f1",
-    "status": "TRAVADA; no arquivo recebido da agencia, não confirmada no repositorio",
-    "last_frame_index": 359
-  },
-  "next_instruction": "PROMPT_MASTER_APOS_V04.md",
-  "publication_authorized": false
+  "delivery_phases": [
+    "asset_audit",
+    "real_audio_alignment",
+    "preview_0_12",
+    "human_approval",
+    "final_after_authorized_photo",
+    "qa"
+  ]
 }

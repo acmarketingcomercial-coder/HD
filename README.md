@@ -1,24 +1,32 @@
-# Souza & Andrade Advogados | AC Motion Studio
-## O assento que não existia | Direito Aéreo | Reels / Meta Ads
+# HD — Produção AC Motion Studio
+## Campanha atual: Franciele Fotografias — Reserva Programada
 
-**Estado em 13/11/2026:** abertura V04 (0–12 s) liberada como referência. Agora está **autorizado executar o MASTER COMPLETO PARA REVISÃO**, **não publicar**.
+Este repositório é um espaço operacional reutilizado para a próxima produção audiovisual. A campanha anterior foi preservada em:
+backup-hd-antes-franciele-20261113
 
-### Leia nesta ordem
-1. **[PROMPT_MASTER_APOS_V04.md](PROMPT_MASTER_APOS_V04.md)** — instrução de continuidade que trava a V04 e detalha 12–42 s.
-2. [PROMPT_CLAUDE_CODE.md](PROMPT_CLAUDE_CODE.md) — briefing e identidade originários, válidos exceto o antigo portão “renderizar somente prévia”.
-3. [MANIFEST.json](MANIFEST.json) — SHA e controle de fontes/arquivos.
-4. [LEGAL_VALIDATION.md](LEGAL_VALIDATION.md) — checagem jurídica obrigatória antes de veicular.
+**Leia primeiro:** PROMPT_CLAUDE_CODE.md e MANIFEST.json.
 
-### Ativos críticos
-- Locução original no repositório: `assets/ElevenLabs_2026-11-13T06_10_46_Davi Andrei_pvc_s50_sim75_cs14_v4.mp3` (SHA no manifesto).
-- Prévia V04 aprovada: arquivo de vídeo entregue à agência, SHA `0c32b9d76ff2d54d1a3704793feefca7d1acc47b3d9fd6af045dfc2bc943e8f1`. Deve ser encontrado/importado no ambiente do Claude Code antes da continuidade.
-- **ATENÇÃO À MARCA:** o logo original canônico é `LOGO_OFICIAL_SOUZA_ANDRADE.png` (PNG RGBA 1080×1350, SHA no manifesto). O arquivo de 500×200 atualmente presente no repositório não foi demonstrado equivalente. Conferir e usar o original sem redesenho.
+### Status dos materiais
+O pacote técnico textual está neste branch; arquivos de mídia binária de Franciele precisam ser importados em assets/ a partir do ZIP que acompanha a entrega do ChatGPT. Este repositório NÃO contém, nesta atualização, a locução OGG, a capa PNG, a logo PNG, nem o mockup PNG. Não use assets de outras campanhas: a árvore principal foi renovada para evitar confusão.
 
-### Comando curto para Claude Code
-> Leia `PROMPT_MASTER_APOS_V04.md` antes de executar. Preserve 0–12 s da V04, confira o MP3 e o logotipo oficial por SHA, desenvolva os 12–42 s em continuidade com a mesma identidade e sound design, gere o master MP4 **PARA REVISÃO**, forneça relatório de QA, e não publique.
+Arquivos esperados:
+- assets/narracao_franciele_reserva_programada_original.ogg
+- assets/narracao_franciele_reserva_programada_master.wav (derivado opcional)
+- assets/logo_franciele_fotografias_original.png
+- assets/capa_carne_aberta_original.png
+- assets/mockup_carne_3d_aprovado.png
+- assets/foto_ensaio_real_autorizada.ext (foto de portfólio real ainda a receber; bloqueia render final)
 
-O repositório é **público**. Não subir dados confidenciais ou materiais sem licença. Campanha anterior preservada em `backup-cemesc-antes-souza-20261113`.
+### Início no Claude Code
+1. Abrir/clonar acmarketingcomercial-coder/HD no branch main.
+2. Importar os binários do ZIP entregue ao cliente, preservando nomes e paths.
+3. Ler PROMPT_CLAUDE_CODE.md, MANIFEST.json e docs/.
+4. Verificar hashes, codec, narração real e dimensões.
+5. Produzir apenas prévia audiovisual 0–12s para aprovação.
+6. Receber foto real autorizada para a revelação antes da versão final.
 
+### Atenção
+35,6465s é a duração real medida do áudio original; as cenas do prompt usam janelas provisórias, não timings de palavras verificados. Roteiro aprovado não pode ser alterado. Sem sobreposição de textos no vídeo.
+Sem GitHub Actions. Revisões, renders e deploy/push devem ser locais/manuais.
 
-### Conhecimento e continuidade
-- [Aprendizados aprovados do AC Motion Studio: Souza & Andrade (13/11/2026)](docs/AC_MOTION_STUDIO_APRENDIZADOS_SOUZA_ANDRADE_2026-11-13.md) — histórico da V01 à V04, masters V01–V02, regras gerais e específicas, arquivos/hash, aprovação criativa e pendências pré-publicação.
+Contato do projeto: Franciele Fotografias, Coluna/MG.
