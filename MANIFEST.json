@@ -1,34 +1,102 @@
 {
-  "project_id": "CEMESC-MOTION-20261112-PALPITACOES-v01",
-  "brand": "CEMESC",
-  "date": "2026-11-12",
-  "status": "roteiro e direção aprovados; produção não iniciada; master depende de aprovação de prévia",
-  "format": {
-    "width": 1080,
-    "height": 1920,
+  "project_id": "SA-OVERBOOKING-MOTION-20261113-v1",
+  "client": "Souza & Andrade Advogados Associados",
+  "concept": "O assento que não existia",
+  "status": "Conceito e voz aprovados; direção de lettering para prévia; master depende de aprovação e validação jurídica",
+  "spec": {
+    "w": 1080,
+    "h": 1920,
     "fps": 30,
-    "aspect_ratio": "9:16",
-    "master_duration_target_seconds_approx": 39.5
-  },
-  "narration_duration_seconds": 35.47425,
-  "narration_is_master_timeline": true,
-  "official_assets": {
-    "assets/CEMESC_Logo_Oficial_20261112.png": {
-      "source_uploaded_name": "Logo Cemesc(1).png",
-      "bytes": 366218,
-      "sha256": "e7c368b86d98527970cf5c06a7cd1781914b5480e826a14809ffb8b04e591b2e",
-      "present_in_source": true,
-      "role": "logo oficial integral"
-    },
-    "assets/CEMESC_Narracao_Palpitacoes_20261112_Leni.mp3": {
-      "source_uploaded_name": "ElevenLabs_2026-11-12T17_28_25_Leni - Meditative and profound_pvc_s50_sim75_v4(1).mp3",
-      "bytes": 584525,
-      "sha256": "d870641c933f7e0f48c03daa4c8b99f8cdedf69cbab37163209bd79b0a9e72e6",
-      "present_in_source": true,
-      "role": "locução aprovada"
+    "format": "9:16",
+    "voice_seconds": 39.810563,
+    "approx_master_seconds": 41.9,
+    "safe": {
+      "left": 86,
+      "right": 86,
+      "top": 250,
+      "bottom": 400
     }
   },
-  "other_assets_status": "não fornecidos: b-roll, fotos oficiais da equipe, trilha comercial licenciada, efeitos com licenças confirmadas",
-  "previous_backup_branch": "backup-jvx-antes-cemesc-20261112",
-  "repository_visibility_notice": "public; verificar privacidade e direitos"
+  "voice": {
+    "path": "assets/LOCUCAO_SOUZA_ANDRADE_OVERBOOKING_APROVADA.mp3",
+    "sha256": "8afb9877e732e99b86c2055d2b88036de6c3f7df4ac79a32556d483bd9909427",
+    "bytes": 653906,
+    "mp3": "mono, 44100Hz",
+    "github_status": "PENDENTE: presente no ZIP local, não no repo"
+  },
+  "logo": {
+    "path": "assets/LOGO_OFICIAL_SOUZA_ANDRADE.png",
+    "sha256": "845fe31a67f6b2749fc216c82ea07d65f6d309c425cbc8424bfbc218dd472b1a",
+    "bytes": 59767,
+    "format": "RGBA, 1080x1350",
+    "bbox_visible": [
+      114,
+      537,
+      966,
+      813
+    ],
+    "github_status": "PENDENTE: presente no ZIP local, não no repo"
+  },
+  "pauses_silence_seconds": [
+    [
+      1.03,
+      1.45
+    ],
+    [
+      2.08,
+      2.46
+    ],
+    [
+      3.63,
+      4.02
+    ],
+    [
+      5.03,
+      5.51
+    ],
+    [
+      7.4,
+      7.72
+    ],
+    [
+      10.39,
+      10.69
+    ],
+    [
+      17.23,
+      17.62
+    ],
+    [
+      19.34,
+      19.67
+    ],
+    [
+      23.86,
+      24.23
+    ],
+    [
+      26.85,
+      27.12
+    ],
+    [
+      29.74,
+      30.03
+    ],
+    [
+      34.87,
+      35.29
+    ],
+    [
+      36.23,
+      36.57
+    ],
+    [
+      39.51,
+      39.81
+    ]
+  ],
+  "timing_note": "Silêncios medidos; NÃO equivalem a tempos exatos das palavras. Executar alinhamento/escuta.",
+  "backups": "backup-cemesc-antes-souza-20261113",
+  "repository_visibility": "PUBLIC",
+  "legal_approval": "obrigatória"
 }
