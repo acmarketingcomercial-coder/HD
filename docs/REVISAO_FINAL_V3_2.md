@@ -4,12 +4,12 @@
 **STATUS:** direção criativa V3.1 aprovada com três correções específicas pendentes. **Esta instrução V3.2 complementa e, somente nestes três pontos, prevalece sobre o prompt V3 e as instruções V3.1.** Não refazer cenas aprovadas nem gerar o vídeo completo.
 
 ## 0. Missão e materiais
-Você é o Claude Code responsável pelo projeto audiovisual Franciele Fotografias — Reserva Programada. Abra o repositório \`acmarketingcomercial-coder/HD\`, branch \`main\`. Leia:
-- \`PROMPT_CLAUDE_CODE.md\` (direção-base V3);
-- \`docs/DIRECAO_APROVADA_V3.md\`, \`docs/PLANO_DECUPAGEM_V3.md\`, \`docs/AUDIO_EDICAO_V3.md\`, \`docs/QA_CHECKLIST_V3.md\`;
-- este documento \`docs/REVISAO_FINAL_V3_2.md\`.
+Você é o Claude Code responsável pelo projeto audiovisual Franciele Fotografias — Reserva Programada. Abra o repositório `acmarketingcomercial-coder/HD`, branch `main`. Leia:
+- `PROMPT_CLAUDE_CODE.md` (direção-base V3);
+- `docs/DIRECAO_APROVADA_V3.md`, `docs/PLANO_DECUPAGEM_V3.md`, `docs/AUDIO_EDICAO_V3.md`, `docs/QA_CHECKLIST_V3.md`;
+- este documento `docs/REVISAO_FINAL_V3_2.md`.
 
-**Fonte de trabalho:** use o projeto/código/timeline que produziu \`previa_franciele_reserva_programada_V3_1_0-18s.mp4\` no ambiente atual do Claude Code. Essa prévia foi enviada ao ChatGPT e examinada, mas **não assuma que o arquivo MP4 ou o código-fonte estejam versionados no repositório HD**. Se estiverem no workspace, reutilize; se não estiverem, identifique a ausência explicitamente e não finja ter feito a comparação. Os originais em \`assets/\` permanecem inalterados.
+**Fonte de trabalho:** use o projeto/código/timeline que produziu `previa_franciele_reserva_programada_V3_1_0-18s.mp4` no ambiente atual do Claude Code. Essa prévia foi enviada ao ChatGPT e examinada, mas **não assuma que o arquivo MP4 ou o código-fonte estejam versionados no repositório HD**. Se estiverem no workspace, reutilize; se não estiverem, identifique a ausência explicitamente e não finja ter feito a comparação. Os originais em `assets/` permanecem inalterados.
 
 **Objetivo:** refinar apenas três aspectos pendentes e entregar uma V3.2 de cerca de 18,5 segundos para aprovação final da prévia: (1) curvatura e geometria das páginas de boleto, (2) sound design novo e efetivamente audível/sincronizado no folhear, (3) leve clareamento LOCALIZADO da modelo de roupa branca. A abertura, o estúdio 3D, a rolagem do Instagram, o texto motion aprovado, a capa 3D e a sequência narrativa NÃO devem sofrer mudanças estruturais.
 
@@ -68,9 +68,9 @@ Trecho: modelo de cabelo curto em regata/roupa branca, acessórios dourados, fun
 
 ## 6. QA e entregáveis
 Entregar:
-- **\`output/previa_franciele_reserva_programada_V3_2_0-18s.mp4\`**, vertical 1080x1920, 30fps, H.264 yuv420p + AAC 48k, com áudio, mantendo a duração efetiva natural da montagem (~18,5s).
+- **`output/previa_franciele_reserva_programada_V3_2_0-18s.mp4`**, vertical 1080x1920, 30fps, H.264 yuv420p + AAC 48k, com áudio, mantendo a duração efetiva natural da montagem (~18,5s).
 - Screenshots comparativos V3.1 × V3.2 (ou de frames de entrada/saída de correções quando a V3.1 não estiver acessível): modelo em 3,7/4,5s e boletos em 12,5/13,5/14,5/15s, mais checks rápidos da abertura, estúdio e Instagram.
-- \`output/qa_v3_2/relatorio.md\`: breve descrição objetiva do que foi mudado, parâmetros efetivos de correção de cor, notas de geometria/escala das páginas, lista de SFX/tempos, métricas básicas de áudio/vídeo e limitações, incluindo autorizações pendentes de veiculação.
+- `output/qa_v3_2/relatorio.md`: breve descrição objetiva do que foi mudado, parâmetros efetivos de correção de cor, notas de geometria/escala das páginas, lista de SFX/tempos, métricas básicas de áudio/vídeo e limitações, incluindo autorizações pendentes de veiculação.
 - Pequeno A/B somente do trecho 12–15,5s, quando tecnicamente viável, para verificar que a nova sonorização realmente difere da anterior e acompanha as viradas.
 
 Critérios de aceite:
