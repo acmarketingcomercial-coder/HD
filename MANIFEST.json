@@ -15,7 +15,7 @@
   "no_text_overlays": true,
   "voice_original_only": true,
   "repository_binary_assets_status": "AUDIO_LOGO_CAPA_MOCKUP_PRESENTES__VIDEOS_ENSAIOS_IMPORTACAO_LOCAL",
-  "note": "O repositório já tem áudio/logo/capa/mockup. Os cinco vídeos de pessoas reais são importados via ZIP local para a pasta assets/ensaios_originais, por privacidade. Conferir autorização comercial antes de veiculação.",
+  "note": "Áudio, logo, capa, mockup 3D e uma fotografia impressa já existem no HD. Os cinco vídeos reais de clientes devem ser importados LOCALMENTE do pacote ZIP em assets/ensaios_originais/; confirmar autorização comercial das pessoas retratadas antes de veicular ou compartilhar publicamente. Verificar a adequação/autorização da fotografia impressa antes do render final.",
   "files": [
     {
       "path": "assets/narracao_franciele_reserva_programada_original.ogg",
@@ -23,7 +23,7 @@
       "bytes": 83897,
       "sha256": "17c09e3c53d1e8e69ead4809be1c5541669f7a04e0f8d8aea1a723d1589aee09",
       "required": true,
-      "present_in_repo": false
+      "present_in_repo": true
     },
     {
       "path": "assets/narracao_franciele_reserva_programada_master.wav",
@@ -31,7 +31,7 @@
       "bytes": 3420894,
       "sha256": "abe9323e17628ca958cee9198e0dedeb66ccf0cb2e2a0e42808d05cfe9bb07f7",
       "required": false,
-      "present_in_repo": false
+      "present_in_repo": true
     },
     {
       "path": "assets/logo_franciele_fotografias_original.png",
@@ -43,7 +43,7 @@
       "bytes": 34080,
       "sha256": "50f35b71ff00e6d050f0d215b47ee712bbac5a5c7cca28beca7763f2ea4bfc06",
       "required": true,
-      "present_in_repo": false
+      "present_in_repo": true
     },
     {
       "path": "assets/capa_carne_aberta_original.png",
@@ -55,7 +55,7 @@
       "bytes": 141232,
       "sha256": "2a0b4b6a530a110e31cdc899e622b314c635909fd3d47e95fe6243ae3aed5369",
       "required": true,
-      "present_in_repo": false
+      "present_in_repo": true
     },
     {
       "path": "assets/mockup_carne_3d_aprovado.png",
@@ -67,7 +67,7 @@
       "bytes": 2048446,
       "sha256": "cb686e387427c9778772a2b720b745003854eeaabca372f612455ab7e515b933",
       "required": true,
-      "present_in_repo": false
+      "present_in_repo": true
     },
     {
       "path": "assets/foto_ensaio_real_autorizada.ext",
@@ -130,5 +130,6 @@
       "sha256": "6530483b9797f81bd1aa6083df8472bab72971edf613f9e62b32ebaf04a7d658",
       "repository_status": "local_import_required"
     }
-  ]
+  ],
+  "photo_candidate_in_repo": "assets/Fotografia impressa.jpeg (requer verificação de qualidade, conteúdo e autorização)"
 }
