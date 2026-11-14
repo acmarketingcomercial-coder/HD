@@ -1,5 +1,5 @@
 {
-  "version": "3.4",
+  "version": "3.5-test",
   "generated_at": "2026-11-13",
   "campaign": "Franciele Fotografias — Reserva Programada",
   "video": "O carnê que vira fotografia",
@@ -15,7 +15,7 @@
   "no_text_overlays": false,
   "voice_original_only": true,
   "repository_binary_assets_status": "AUDIO_LOGO_CAPA_MOCKUP_E_CINCO_VIDEOS_PRESENTES_EM_ASSETS",
-  "note": "V3.4 é revisão editorial/sonora do master V3.3 ~30.8s. Não seguir os tempos e takes como grade rígida. Confirmar source/timeline no workspace Claude Code, pois só assets e documentação estão no repo; render V3.4 completo para aprovação, sem publicação automática.",
+  "note": "V3.4 de 30,8s verificada: vídeo 1080x1920 30fps H.264 Rec709 AAC 48k. Primeiro testar A/B redução de artefatos, nitidez e cinematic editorial natural em IMG_2040/2042/2043, usando fonte original, respeitando grade prévio de IMG_2042. Não reconstruir rostos, não empilhar filtros, não grade global no Instagram/carnê/logo. Áudio V3.4 preservado, escuta final pendente. Repositório HD contém assets/docs; código-fonte V3.4 veio em ZIP anexado.",
   "files": [
     {
       "path": "assets/narracao_franciele_reserva_programada_original.ogg",
@@ -164,7 +164,7 @@
       "direção V2 renderizada em prévia"
     ]
   },
-  "active_direction": "V3.4_ritmo_audio",
+  "active_direction": "V3.5_piloto_qualidade_color",
   "voice_corrected_seconds_approx": 30.1985,
   "voice_corrected_script": "scripts/preparar_locucao_v3.sh",
   "voice_corrected_output": "assets/narracao_franciele_corrigida_v3.wav",
@@ -203,5 +203,13 @@
   ],
   "revision_document": "docs/REVISAO_RITMO_AUDIO_V3_4.md",
   "v3_4_master_production_authorized": true,
-  "audio_glitch_note": "Não houve lacuna de pacotes/PTS reportada na análise do V3.3; transientes ~22.92-23.0s coincidem com ataque da frase final, conferir por audição A/B e não remover /s/ com de-click agressivo."
+  "audio_glitch_note": "Não houve lacuna de pacotes/PTS reportada na análise do V3.3; transientes ~22.92-23.0s coincidem com ataque da frase final, conferir por audição A/B e não remover /s/ com de-click agressivo.",
+  "v3_4_visual_edit_status": "montagem_ritmo_aprovados_visualmente",
+  "v3_4_audio_status": "reparo_medido_escuta_humana_pendente",
+  "v3_5_scope": "tratar seletivamente videos reais, teste A/B primeiro; não colorir logo, capa, boletos ou interface Instagram",
+  "v3_5_test_authorized": true,
+  "v3_5_master_full_render_authorized": false,
+  "v3_5_look_approved": false,
+  "color_qa_document": "docs/TRATAMENTO_IMAGEM_COLOR_V3_5.md",
+  "v3_4_source_package_received": "franciele_reserva_projeto_master_V3_4.zip (anexo da usuária, não materializado no GitHub)"
 }
