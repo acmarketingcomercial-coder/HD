@@ -19,4 +19,4 @@ Os tempos de origem sugeridos abaixo vieram da inspeção editorial dos cinco ar
 - 9,2–12s: revelar carnê fechado e iniciar abertura/página com som.
 
 ### Controle
-Tempo de referência é a voz OGG original de 35,6465s; janelas narrativas são APROXIMADAS. Não publicar vídeos brutos de clientes em GitHub público sem autorização; importar localmente em assets/ensaios_originais/.
+Tempo de referência é a voz OGG original de 35,6465s; janelas narrativas são APROXIMADAS. Os arquivos já estão no GitHub público em `assets/IMG_2040.mp4` a `assets/IMG_2044.mp4`. Não reimportar e não procurar `assets/ensaios_originais/`. Verificar autorização comercial antes de veicular.

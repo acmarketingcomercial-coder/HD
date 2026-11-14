@@ -1,6 +1,6 @@
 # AC MOTION STUDIO — PROMPT TÉCNICO V2 — DIREÇÃO APROVADA
 ## FRANCIELE FOTOGRAFIAS | RESERVA PROGRAMADA | O CARNÊ QUE VIRA FOTOGRAFIA
-Documento autossuficiente para Claude Code. Versão 2.0 — 13 de novembro de 2026.
+Documento autossuficiente para Claude Code. Versão 2.1 — 13 de novembro de 2026. Assets e paths auditados no GitHub HD.
 ESTA VERSÃO SUBSTITUI COMPLETAMENTE A DIREÇÃO VISUAL V1. NUNCA iniciar com o carnê.
 
 ## 1. MISSÃO
@@ -44,15 +44,15 @@ No GitHub HD, pasta assets/:
 - mockup_carne_3d_aprovado.png: referência visual aprovada, 1448 x 1086, raster estático que parece 3D; NÃO é mesh tridimensional editável.
 - Fotografia impressa.jpeg: presente no repositório, mas uso como retrato final depende de inspeção de conteúdo, qualidade e autorização; não presumir que está aprovada.
 
-NOVOS ARQUIVOS DE VÍDEO (fornecidos pela cliente, NÃO hospedados neste GitHub público):
-Importar localmente do ZIP entregue pela cliente para assets/ensaios_originais/:
-IMG_2040.mp4 — 8,4383s; 720 x 1280; 29,97 fps; SHA256 bb5312e870af7948c228c7c0b62845bde3735397ac66ee2cdf64bd32f3685fdf.
-IMG_2041.mp4 — 15,2417s; 360 x 640; 29,97 fps; SHA256 1898ddd61b1819621a89320afeca2ed6474ce2ca99bfa6e2618d0e9f9a0c5aec.
-IMG_2042.mp4 — 6,5033s; 360 x 640; 29,97 fps; SHA256 e0ddf00609a24e0a3bfb1a01c5cf5ece23ed1e1574a691b5ad0d84f91f174e4e.
-IMG_2043.mp4 — 60,1368s; 360 x 640; fps variable/misto; SHA256 f4ffe3f8bc81080755c9acdd860802809c92409b5d39fac87b9efc5480b6733f.
-IMG_2044.mp4 — 21,0809s; 360 x 640; fps variável/misto; SHA256 6530483b9797f81bd1aa6083df8472bab72971edf613f9e62b32ebaf04a7d658.
+VÍDEOS REAIS DE ENSAIO (JÁ HOSPEDADOS no repositório GitHub HD, pasta assets/):
+O Claude Code DEVE usar DIRETAMENTE os arquivos abaixo. NÃO pedir ZIP, NÃO importar novamente, NÃO assumir a pasta assets/ensaios_originais/. Caminhos completos de cada vídeo:
+assets/IMG_2040.mp4 — 8,4383s; 720 x 1280; 29,97 fps; SHA256 bb5312e870af7948c228c7c0b62845bde3735397ac66ee2cdf64bd32f3685fdf.
+assets/IMG_2041.mp4 — 15,2417s; 360 x 640; 29,97 fps; SHA256 1898ddd61b1819621a89320afeca2ed6474ce2ca99bfa6e2618d0e9f9a0c5aec.
+assets/IMG_2042.mp4 — 6,5033s; 360 x 640; 29,97 fps; SHA256 e0ddf00609a24e0a3bfb1a01c5cf5ece23ed1e1574a691b5ad0d84f91f174e4e.
+assets/IMG_2043.mp4 — 60,1368s; 360 x 640; fps variable/misto; SHA256 f4ffe3f8bc81080755c9acdd860802809c92409b5d39fac87b9efc5480b6733f.
+assets/IMG_2044.mp4 — 21,0809s; 360 x 640; fps variável/misto; SHA256 6530483b9797f81bd1aa6083df8472bab72971edf613f9e62b32ebaf04a7d658.
 
-Os vídeos mostram PESSOAS REAIS. Verificar autorização de uso comercial para veiculação; não publicar brutos em repositório público sem consentimento explícito para distribuição. Para montagem interna e prévia, importar via pacote local, sem distribuir externamente. Não usar banco de imagens ou pessoas geradas como substituto. Preservar fisionomias, expressões e proporções; evitar super-resolução que fabrique detalhes de pele/rosto.
+Os vídeos mostram PESSOAS REAIS e JÁ estão no GitHub público. Verificar autorização de uso comercial antes da veiculação e não duplicar/republicar sem consentimento explícito. Os vídeos já estão no HD público. Não duplicar nem redistribuir os brutos; confirmar autorização de veiculação das pessoas retratadas antes de publicar anúncios. Para eventual necessidade de proteção desses arquivos, avaliar o acesso e histórico Git do repositório separadamente. Não usar banco de imagens ou pessoas geradas como substituto. Preservar fisionomias, expressões e proporções; evitar super-resolução que fabrique detalhes de pele/rosto.
 
 ## 5. PRÉ-SELEÇÃO DE MATERIAL
 Timecodes de origem APROXIMADOS, não cortes absolutos; rever cada trecho diretamente, com waveform e quadros:
@@ -137,7 +137,7 @@ NÃO publicar preview como vídeo final nem executar deploy. Não criar workflow
 - Para veiculação final, conferir autorização de uso comercial das pessoas filmadas, da fotografia impressa e licenças musicais.
 
 ## 11. BLOQUEIOS E INSTRUÇÃO DE INÍCIO
-A locução, capa e logo estão no GitHub; os cinco clipes reais devem ser importados LOCALMENTE de pacote de mídia para assets/ensaios_originais/. Se não estiverem presentes, indicar pendência em vez de criar vídeo com material antigo, pessoa artificial ou stock. O repositório HD é público: NÃO enviar brutos de clientes ao GitHub sem consentimento específico.
+A locução, capa, logo, mockup e os cinco clipes reais (assets/IMG_2040.mp4 a assets/IMG_2044.mp4) estão no GitHub HD. Não é preciso ZIP nem importação manual; utilizar exatamente esses caminhos. Se algum estiver ausente em um clone/checkout futuro, verificar branch `main` e sincronização com `git pull`, sem substituir por material antigo, pessoas artificiais ou stock. O repositório HD é público: NÃO enviar brutos de clientes ao GitHub sem consentimento específico.
 Se a fotografia final não estiver adequada/autorizada, isso não bloqueia a prévia 0–12s, mas BLOQUEIA render final. Não substituir por rosto sintético.
 Se o mockup raster não permitir virada física sem distorção, construir nova animação geométrica a partir da capa aberta original, sem alterar impressão.
 PRIMEIRA AÇÃO: auditar assets, escolher takes reais da abertura, alinhar voz, produzir um teste curto de montagem e depois a prévia completa 0–12 segundos com áudio e sound design. Solicitar aprovação da prévia. Não produzir o vídeo completo nesta etapa.

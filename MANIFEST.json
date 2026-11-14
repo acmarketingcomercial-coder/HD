@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "2.1",
   "generated_at": "2026-11-13",
   "campaign": "Franciele Fotografias — Reserva Programada",
   "video": "O carnê que vira fotografia",
@@ -14,8 +14,8 @@
   "format": "1080x1920 9:16 MP4 H.264 AAC",
   "no_text_overlays": true,
   "voice_original_only": true,
-  "repository_binary_assets_status": "AUDIO_LOGO_CAPA_MOCKUP_PRESENTES__VIDEOS_ENSAIOS_IMPORTACAO_LOCAL",
-  "note": "Áudio, logo, capa, mockup 3D e uma fotografia impressa já existem no HD. Os cinco vídeos reais de clientes devem ser importados LOCALMENTE do pacote ZIP em assets/ensaios_originais/; confirmar autorização comercial das pessoas retratadas antes de veicular ou compartilhar publicamente. Verificar a adequação/autorização da fotografia impressa antes do render final.",
+  "repository_binary_assets_status": "AUDIO_LOGO_CAPA_MOCKUP_E_CINCO_VIDEOS_PRESENTES_EM_ASSETS",
+  "note": "Auditoria de diretório da branch main: os cinco vídeos estão no repositório público em assets/IMG_2040.mp4 a assets/IMG_2044.mp4, junto com narração, logo, capa e mockup. Não importar ZIP nem procurar em assets/ensaios_originais. Verificar autorização comercial das pessoas retratadas antes de veicular. Fotografia impressa.jpeg existe mas adequação e autorização não foram verificadas.",
   "files": [
     {
       "path": "assets/narracao_franciele_reserva_programada_original.ogg",
@@ -87,8 +87,8 @@
   "campaign_direction": "Abertura real com ensaios -> papel -> carnê revelado após ~9,2s -> cartões -> fotografia real",
   "preview_status": "V1 revisada, abertura substituída pela V2 aprovada; render V2 ainda pendente",
   "preview_v2_seconds": 12,
-  "footage_location": "assets/ensaios_originais/",
-  "raw_client_footage_uploaded_to_public_repo": false,
+  "footage_location": "assets/",
+  "raw_client_footage_uploaded_to_public_repo": true,
   "footage": [
     {
       "file": "IMG_2040.mp4",
@@ -96,7 +96,9 @@
       "width": 720,
       "height": 1280,
       "sha256": "bb5312e870af7948c228c7c0b62845bde3735397ac66ee2cdf64bd32f3685fdf",
-      "repository_status": "local_import_required"
+      "repository_status": "present_in_main",
+      "path": "assets/IMG_2040.mp4",
+      "present_in_repo": true
     },
     {
       "file": "IMG_2041.mp4",
@@ -104,7 +106,9 @@
       "width": 360,
       "height": 640,
       "sha256": "1898ddd61b1819621a89320afeca2ed6474ce2ca99bfa6e2618d0e9f9a0c5aec",
-      "repository_status": "local_import_required"
+      "repository_status": "present_in_main",
+      "path": "assets/IMG_2041.mp4",
+      "present_in_repo": true
     },
     {
       "file": "IMG_2042.mp4",
@@ -112,7 +116,9 @@
       "width": 360,
       "height": 640,
       "sha256": "e0ddf00609a24e0a3bfb1a01c5cf5ece23ed1e1574a691b5ad0d84f91f174e4e",
-      "repository_status": "local_import_required"
+      "repository_status": "present_in_main",
+      "path": "assets/IMG_2042.mp4",
+      "present_in_repo": true
     },
     {
       "file": "IMG_2043.mp4",
@@ -120,7 +126,9 @@
       "width": 360,
       "height": 640,
       "sha256": "f4ffe3f8bc81080755c9acdd860802809c92409b5d39fac87b9efc5480b6733f",
-      "repository_status": "local_import_required"
+      "repository_status": "present_in_main",
+      "path": "assets/IMG_2043.mp4",
+      "present_in_repo": true
     },
     {
       "file": "IMG_2044.mp4",
@@ -128,8 +136,32 @@
       "width": 360,
       "height": 640,
       "sha256": "6530483b9797f81bd1aa6083df8472bab72971edf613f9e62b32ebaf04a7d658",
-      "repository_status": "local_import_required"
+      "repository_status": "present_in_main",
+      "path": "assets/IMG_2044.mp4",
+      "present_in_repo": true
     }
   ],
-  "photo_candidate_in_repo": "assets/Fotografia impressa.jpeg (requer verificação de qualidade, conteúdo e autorização)"
+  "photo_candidate_in_repo": "assets/Fotografia impressa.jpeg (requer verificação de qualidade, conteúdo e autorização)",
+  "repository_audit": {
+    "date": "2026-11-13",
+    "branch": "main",
+    "confirmed_files": [
+      "assets/IMG_2040.mp4",
+      "assets/IMG_2041.mp4",
+      "assets/IMG_2042.mp4",
+      "assets/IMG_2043.mp4",
+      "assets/IMG_2044.mp4",
+      "assets/narracao_franciele_reserva_programada_original.ogg",
+      "assets/narracao_franciele_reserva_programada_master.wav",
+      "assets/logo_franciele_fotografias_original.png",
+      "assets/capa_carne_aberta_original.png",
+      "assets/mockup_carne_3d_aprovado.png",
+      "assets/Fotografia impressa.jpeg"
+    ],
+    "needs_final_approval": [
+      "uso comercial de pessoas nos vídeos",
+      "adequação/autorização de Fotografia impressa.jpeg ou outra fotografia real",
+      "direção V2 renderizada em prévia"
+    ]
+  }
 }
