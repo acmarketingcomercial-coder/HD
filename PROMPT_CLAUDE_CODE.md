@@ -1,6 +1,6 @@
 # AC MOTION STUDIO — FRANCIELE FOTOGRAFIAS — PROMPT TÉCNICO V3 (BASE)
 
-**STATUS VIGENTE — FINALIZAÇÃO V3.3 AUTORIZADA:** A prévia V3.2 (~18,5s) foi aprovada visualmente. A usuária autorizou concluir a segunda metade e **renderizar o master completo para revisão**; a mixagem final deve melhorar de modo perceptível o folhear dos boletos. Leia primeiro `docs/FINALIZACAO_V3_3.md`, que prevalece sobre as proibições antigas de render completo contidas nas versões anteriores. **Publicação comercial NÃO autorizada automaticamente.**
+**DIREÇÃO VIGENTE — REVISÃO V3.4 APROVADA:** Leia PRIMEIRO `docs/REVISAO_RITMO_AUDIO_V3_4.md`. O master V3.3 (~30,8s) será revisado apenas para reduzir movimentos excessivos nos primeiros 9s e auditar/reparar sons/trechos de voz problemáticos (atenção ~22,9s). Preservar conceito, Instagram, carnê com BOLETOS, rosto das clientes e encerramento. Produção/render da V3.4 para avaliação estão autorizados; veiculação NÃO está autorizada automaticamente.
 Versão: 13/11/2026. Autossuficiente. **V3 SUBSTITUI as direções V1/V2.** Campanha: Reserva Programada. Cliente: Franciele Fotografias, Coluna/MG. Produzir anúncio vertical profissional com vídeos reais, motion design de alto padrão e sound design criativo. Não usar GitHub Actions. Não renderizar peça completa antes da aprovação da prévia.
 
 ## 1. Narrativa e objetivos

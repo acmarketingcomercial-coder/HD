@@ -1,5 +1,5 @@
 {
-  "version": "3.3",
+  "version": "3.4",
   "generated_at": "2026-11-13",
   "campaign": "Franciele Fotografias — Reserva Programada",
   "video": "O carnê que vira fotografia",
@@ -15,7 +15,7 @@
   "no_text_overlays": false,
   "voice_original_only": true,
   "repository_binary_assets_status": "AUDIO_LOGO_CAPA_MOCKUP_E_CINCO_VIDEOS_PRESENTES_EM_ASSETS",
-  "note": "A usuária aprovou visualmente a prévia V3.2 e autorizou concluir e renderizar o master V3.3 para revisão. Preservar primeiros 18,5s de VISUAL, concluir com footage real na voz corrigida ~30,2s, refinar sound design dos boletos na mixagem final. GitHub contém ASSETS e docs, mas não necessariamente timeline/código Remotion da V3.2. Uso comercial/publicação depende de autorização específica de imagem e licença musical.",
+  "note": "V3.4 é revisão editorial/sonora do master V3.3 ~30.8s. Não seguir os tempos e takes como grade rígida. Confirmar source/timeline no workspace Claude Code, pois só assets e documentação estão no repo; render V3.4 completo para aprovação, sem publicação automática.",
   "files": [
     {
       "path": "assets/narracao_franciele_reserva_programada_original.ogg",
@@ -164,7 +164,7 @@
       "direção V2 renderizada em prévia"
     ]
   },
-  "active_direction": "V3.3_finalizacao",
+  "active_direction": "V3.4_ritmo_audio",
   "voice_corrected_seconds_approx": 30.1985,
   "voice_corrected_script": "scripts/preparar_locucao_v3.sh",
   "voice_corrected_output": "assets/narracao_franciele_corrigida_v3.wav",
@@ -193,5 +193,15 @@
     30.6,
     31
   ],
-  "final_production_prompt": "docs/FINALIZACAO_V3_3.md"
+  "final_production_prompt": "docs/FINALIZACAO_V3_3.md",
+  "master_v3_3_review_status": "recebido_e_revisado; movimentos iniciais excessivos e audio pontual a corrigir",
+  "v3_4_approved_scope": [
+    "reduzir movimentos e cortes excessivos nos primeiros 0-9s",
+    "preservar narração original corrigida e investigar estalos ao redor de 22.92-23.10s",
+    "suavizar SFX e transições sonoras que realmente destoem",
+    "manter demais cenas conceitualmente aprovadas"
+  ],
+  "revision_document": "docs/REVISAO_RITMO_AUDIO_V3_4.md",
+  "v3_4_master_production_authorized": true,
+  "audio_glitch_note": "Não houve lacuna de pacotes/PTS reportada na análise do V3.3; transientes ~22.92-23.0s coincidem com ataque da frase final, conferir por audição A/B e não remover /s/ com de-click agressivo."
 }
