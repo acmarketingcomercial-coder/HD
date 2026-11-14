@@ -1,3 +1,11 @@
+# HD — AC Motion Studio | Franciele Fotografias | V3.3 FINALIZAÇÃO
+
+**STATUS VIGENTE — FINALIZAÇÃO V3.3 AUTORIZADA:** A prévia V3.2 (~18,5s) foi aprovada visualmente. A usuária autorizou concluir a segunda metade e **renderizar o master completo para revisão**; a mixagem final deve melhorar de modo perceptível o folhear dos boletos. Leia primeiro `docs/FINALIZACAO_V3_3.md`, que prevalece sobre as proibições antigas de render completo contidas nas versões anteriores. **Publicação comercial NÃO autorizada automaticamente.**
+
+## Próxima etapa
+Preservar V3.2 visual até ~18,5s, concluir voz corrigida até ~30,2s com cenas reais, realizar mixagem sonora de todo o vídeo, exportar master completo para revisão e QA. **Não publicar ou veicular automaticamente.**
+
+## Fonte técnica
 # HD — AC Motion Studio — Franciele Fotografias V3 (base) + revisão V3.2 aprovada
 ## Revisão localizada vigente: V3.2
 A prévia V3.1 (~18,5s) foi aprovada em estrutura, com **três correções finais**: curvatura e física das páginas dos boletos, novo sound design sincronizado com as viradas, e clareamento localizado da modelo de roupa branca. **Leia `docs/REVISAO_FINAL_V3_2.md` antes de produzir outra prévia.** Não mexa nas partes já aprovadas (abertura, estúdio 3D, rolagem Instagram). Render apenas V3.2 de ~18,5s para aprovação. A prévia V3.1 e seu projeto-fonte podem estar apenas no workspace do Claude Code, não necessariamente versionados neste repositório.
