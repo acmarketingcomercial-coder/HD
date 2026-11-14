@@ -1,5 +1,5 @@
 {
-  "version": "2.1",
+  "version": "3.0",
   "generated_at": "2026-11-13",
   "campaign": "Franciele Fotografias — Reserva Programada",
   "video": "O carnê que vira fotografia",
@@ -12,10 +12,10 @@
   "fps": 30,
   "frames": 1086,
   "format": "1080x1920 9:16 MP4 H.264 AAC",
-  "no_text_overlays": true,
+  "no_text_overlays": false,
   "voice_original_only": true,
   "repository_binary_assets_status": "AUDIO_LOGO_CAPA_MOCKUP_E_CINCO_VIDEOS_PRESENTES_EM_ASSETS",
-  "note": "Auditoria de diretório da branch main: os cinco vídeos estão no repositório público em assets/IMG_2040.mp4 a assets/IMG_2044.mp4, junto com narração, logo, capa e mockup. Não importar ZIP nem procurar em assets/ensaios_originais. Verificar autorização comercial das pessoas retratadas antes de veicular. Fotografia impressa.jpeg existe mas adequação e autorização não foram verificadas.",
+  "note": "V3 substitui V2. Todos os vídeos no GitHub HD assets/. Voz V3 deve ser gerada via script a partir do OGG original e checada na emenda. Rolagem real IMG_6810 foi inspecionada, melhor origem ~3,7–6,3s. Não mostrar carnê antes de fala de pagar; interior só boletos. Autorização comercial de imagens pendente antes de veiculação.",
   "files": [
     {
       "path": "assets/narracao_franciele_reserva_programada_original.ogg",
@@ -85,7 +85,7 @@
     "qa"
   ],
   "campaign_direction": "Abertura real com ensaios -> papel -> carnê revelado após ~9,2s -> cartões -> fotografia real",
-  "preview_status": "V1 revisada, abertura substituída pela V2 aprovada; render V2 ainda pendente",
+  "preview_status": "V3 direção aprovada, aguardando primeira prévia 0-18s",
   "preview_v2_seconds": 12,
   "footage_location": "assets/",
   "raw_client_footage_uploaded_to_public_repo": true,
@@ -163,5 +163,25 @@
       "adequação/autorização de Fotografia impressa.jpeg ou outra fotografia real",
       "direção V2 renderizada em prévia"
     ]
+  },
+  "active_direction": "V3",
+  "voice_corrected_seconds_approx": 30.1985,
+  "voice_corrected_script": "scripts/preparar_locucao_v3.sh",
+  "voice_corrected_output": "assets/narracao_franciele_corrigida_v3.wav",
+  "preview_v3_seconds": 18,
+  "motion_typography": "pontual com frases literais da locução",
+  "no_photos_inside_carnet": true,
+  "carnet_interior": "boletos não pagáveis",
+  "carnet_reveal_cue": "e vai pagando aos poucos",
+  "instagram_scroll": {
+    "path": "assets/IMG_6810.qt",
+    "duration_seconds": 7.475,
+    "codec": "hevc",
+    "width": 886,
+    "height": 1920,
+    "source_in_approx": 3.7,
+    "source_out_approx": 6.3,
+    "verified_by_frame_inspection": true,
+    "needs_final_editor_in_out_confirmation": true
   }
 }

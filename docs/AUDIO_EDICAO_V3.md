@@ -1,0 +1,3 @@
+# Edição da locução V3
+Original: assets/narracao_franciele_reserva_programada_original.ogg, Opus mono, 35,6465s. Descript transcreveu falso começo entre ~23,34–28,44s (“Se você tem vontade...”, repetido/interrompido); última retomada completa começa depois disso. Não regravar nem usar voz artificial.
+Rodar **bash scripts/preparar_locucao_v3.sh**: corta 0–0,40s inicial, conserva 0,40–23,30s, remove 23,30–28,32s e conserva 28,32–35,6335s com 15ms de crossfade. Teste local gera ~30,1985s mono 48kHz, PCM S24. Escutar com atenção a entrada “Se você...” na emenda perto de 22,9s; se a sílaba estiver cortada, ajustar limites de alguns milissegundos antes de usar. Demais pausas são naturais. A voz real prevalece sobre diferenças pequenas do roteiro escrito.

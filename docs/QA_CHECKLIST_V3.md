@@ -1,0 +1,15 @@
+# QA V3
+- [ ] OGG original preservado; voz V3 gerada por script, ~30,2s, sem repetição e sem voz IA.
+- [ ] Escutar a emenda do “Se você...” no novo WAV perto de 22,9s.
+- [ ] IMG_6810.qt em assets/, fonte real HEVC decodificada corretamente; trecho ~3,7–6,3s validado.
+- [ ] Não mostrar painel da conta/indicador iPhone; não inventar feed, postagens ou métricas.
+- [ ] Carnê NÃO aparece na abertura: só durante “vai pagando aos poucos”.
+- [ ] CAPA frontal é metade DIREITA da arte original; título/logotipo sem alteração.
+- [ ] Interior do carnê tem BOLETOS folheando, nunca fotografias, sem dados bancários válidos.
+- [ ] Estúdio 3D editorial breve, não falsa representação do espaço físico.
+- [ ] Motion text pontual, legível, só fragmentos da narração, não legendagem completa.
+- [ ] Sound design câmera/ambiente/scroll/papel sincronizado, música licenciada, voz em primeiro plano.
+- [ ] Respeitar fisionomia dos vídeos reais e evitar assinatura antiga Estúdio Digital.
+- [ ] Prévia V3 0–18s MP4 com áudio e cena de folhear boletos, QA de frames em 0,1,3,5,7,9,10.5,11.5,12.5,13.5,15.5,17.5s.
+- [ ] Confirmar autorizações de imagem antes de veicular; HD é público.
+- [ ] Não produzir vídeo completo antes da aprovação; sem GitHub Actions.
