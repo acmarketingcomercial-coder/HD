@@ -1,5 +1,5 @@
 {
-  "version": "3.5-full",
+  "version": "3.7-preview",
   "generated_at": "2026-11-13",
   "campaign": "Franciele Fotografias — Reserva Programada",
   "video": "O carnê que vira fotografia",
@@ -15,7 +15,7 @@
   "no_text_overlays": false,
   "voice_original_only": true,
   "repository_binary_assets_status": "AUDIO_LOGO_CAPA_MOCKUP_E_CINCO_VIDEOS_PRESENTES_EM_ASSETS",
-  "note": "Piloto V3.5 aprovado pela direção após revisão visual dos A/B e crops em 100%. Render do master completo autorizado para revisão, com timeline da V3.4 intacta e áudio AAC copiado sem reencodar. Em C (IMG_2043), preservar detalhes faciais e luminância; usar menos tratamento se necessário. Não veicular antes das autorizações de imagem/licença e escuta humana.",
+  "note": "V3.7: direção aprovada para alterar tempo/posição de elementos na cena. Testar antes da render completa, preservar 0–5s e 16–30.8s e cor V3.5. A narração e mix estéreo atual da V3.6 são base; alterar somente SFX necessários para casar novas animações, sem afirmar áudio full bit-identical. Direitos de imagem e trilha ainda pendentes antes de publicação.",
   "files": [
     {
       "path": "assets/narracao_franciele_reserva_programada_original.ogg",
@@ -164,7 +164,7 @@
       "direção V2 renderizada em prévia"
     ]
   },
-  "active_direction": "V3.5_master_imagem",
+  "active_direction": "V3.7_redirecao_ritmo",
   "voice_corrected_seconds_approx": 30.1985,
   "voice_corrected_script": "scripts/preparar_locucao_v3.sh",
   "voice_corrected_output": "assets/narracao_franciele_corrigida_v3.wav",
@@ -219,5 +219,11 @@
     "IMG_2042": "aprovado, preservar clareamento localizado sem duplicar",
     "IMG_2043": "aprovado com cautela: minimizar amaciamento do rosto e evitar perda extra de luminosidade"
   },
-  "audio_from_version": "V3.4 AAC stream copy sem reprocessar"
+  "audio_from_version": "V3.4 AAC stream copy sem reprocessar",
+  "preview_v3_7_authorized": true,
+  "v3_7_full_master_authorized": false,
+  "master_reference": "V3.6_AUDIO_ESTEREO (30.8s), master anexado pela usuária; não há comprovação de que esteja versionado no HD",
+  "v3_7_scope": "reestruturar 5.03–15.70s; estúdio mais curto, título integrado ao phone, scroll 2.3–2.5s, capa ~1s, 2–3 viradas de boleto mais lentas, voz intacta",
+  "v3_7_instruction": "docs/REDIRECAO_RITMO_V3_7.md",
+  "v3_6_audio_is_distinct_from_v3_5": true
 }
