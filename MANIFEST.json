@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "2.0",
   "generated_at": "2026-11-13",
   "campaign": "Franciele Fotografias — Reserva Programada",
   "video": "O carnê que vira fotografia",
@@ -14,8 +14,8 @@
   "format": "1080x1920 9:16 MP4 H.264 AAC",
   "no_text_overlays": true,
   "voice_original_only": true,
-  "repository_binary_assets_status": "PENDENTE_DE_IMPORTACAO",
-  "note": "A atualização GitHub via conector inclui instruções textuais. Os binários originais estão no pacote ZIP disponibilizado ao usuário nesta conversa e precisam ser importados em assets/ antes da execução; não usar binários de outros clientes.",
+  "repository_binary_assets_status": "AUDIO_LOGO_CAPA_MOCKUP_PRESENTES__VIDEOS_ENSAIOS_IMPORTACAO_LOCAL",
+  "note": "O repositório já tem áudio/logo/capa/mockup. Os cinco vídeos de pessoas reais são importados via ZIP local para a pasta assets/ensaios_originais, por privacidade. Conferir autorização comercial antes de veiculação.",
   "files": [
     {
       "path": "assets/narracao_franciele_reserva_programada_original.ogg",
@@ -83,5 +83,52 @@
     "human_approval",
     "final_after_authorized_photo",
     "qa"
+  ],
+  "campaign_direction": "Abertura real com ensaios -> papel -> carnê revelado após ~9,2s -> cartões -> fotografia real",
+  "preview_status": "V1 revisada, abertura substituída pela V2 aprovada; render V2 ainda pendente",
+  "preview_v2_seconds": 12,
+  "footage_location": "assets/ensaios_originais/",
+  "raw_client_footage_uploaded_to_public_repo": false,
+  "footage": [
+    {
+      "file": "IMG_2040.mp4",
+      "duration_seconds": 8.438333,
+      "width": 720,
+      "height": 1280,
+      "sha256": "bb5312e870af7948c228c7c0b62845bde3735397ac66ee2cdf64bd32f3685fdf",
+      "repository_status": "local_import_required"
+    },
+    {
+      "file": "IMG_2041.mp4",
+      "duration_seconds": 15.241667,
+      "width": 360,
+      "height": 640,
+      "sha256": "1898ddd61b1819621a89320afeca2ed6474ce2ca99bfa6e2618d0e9f9a0c5aec",
+      "repository_status": "local_import_required"
+    },
+    {
+      "file": "IMG_2042.mp4",
+      "duration_seconds": 6.503333,
+      "width": 360,
+      "height": 640,
+      "sha256": "e0ddf00609a24e0a3bfb1a01c5cf5ece23ed1e1574a691b5ad0d84f91f174e4e",
+      "repository_status": "local_import_required"
+    },
+    {
+      "file": "IMG_2043.mp4",
+      "duration_seconds": 60.136825,
+      "width": 360,
+      "height": 640,
+      "sha256": "f4ffe3f8bc81080755c9acdd860802809c92409b5d39fac87b9efc5480b6733f",
+      "repository_status": "local_import_required"
+    },
+    {
+      "file": "IMG_2044.mp4",
+      "duration_seconds": 21.080862,
+      "width": 360,
+      "height": 640,
+      "sha256": "6530483b9797f81bd1aa6083df8472bab72971edf613f9e62b32ebaf04a7d658",
+      "repository_status": "local_import_required"
+    }
   ]
 }
