@@ -1,6 +1,6 @@
 # AC MOTION STUDIO — FRANCIELE FOTOGRAFIAS — PROMPT TÉCNICO V3 (BASE)
 
-**FASE ATIVA V3.5 — TESTE DE RESTAURAÇÃO E COLOR GRADING:** A V3.4 está aprovada VISUALMENTE em ritmo/montagem, mas o reparo sonoro ainda exige escuta humana. Leia PRIMEIRO `docs/TRATAMENTO_IMAGEM_COLOR_V3_5.md`. Produza SOMENTE comparativos A/B de três cenas em cima do master V3.4, sem reabrir a montagem nem reprocessar o áudio. **Não renderize o master V3.5 completo antes de aprovarmos o look.**
+**ETAPA ATIVA — FINALIZAÇÃO DE IMAGEM V3.5:** piloto do look Cinematic Editorial Natural APROVADO, com ressalva de não suavizar/escurecer excessivamente o rosto no IMG_2043 (cena C). Leia PRIMEIRO `docs/FINALIZACAO_IMAGEM_V3_5.md`. A produção do master V3.5 completo para REVISÃO está autorizada: tratar apenas takes reais ainda pendentes, preservar 100% da timeline/3D/Instagram/carnê e reutilizar AAC do master V3.4 sem reprocessar. Publicação comercial ainda pendente.
 Versão: 13/11/2026. Autossuficiente. **V3 SUBSTITUI as direções V1/V2.** Campanha: Reserva Programada. Cliente: Franciele Fotografias, Coluna/MG. Produzir anúncio vertical profissional com vídeos reais, motion design de alto padrão e sound design criativo. Não usar GitHub Actions. Não renderizar peça completa antes da aprovação da prévia.
 
 ## 1. Narrativa e objetivos

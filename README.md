@@ -1,3 +1,10 @@
+# HD — AC Motion Studio | Franciele Fotografias | Master V3.5 em produção
+
+**ETAPA ATIVA — FINALIZAÇÃO DE IMAGEM V3.5:** piloto do look Cinematic Editorial Natural APROVADO, com ressalva de não suavizar/escurecer excessivamente o rosto no IMG_2043 (cena C). Leia PRIMEIRO `docs/FINALIZACAO_IMAGEM_V3_5.md`. A produção do master V3.5 completo para REVISÃO está autorizada: tratar apenas takes reais ainda pendentes, preservar 100% da timeline/3D/Instagram/carnê e reutilizar AAC do master V3.4 sem reprocessar. Publicação comercial ainda pendente.
+
+**Referências:** `docs/FINALIZACAO_IMAGEM_V3_5.md` (etapa agora) e `docs/TRATAMENTO_IMAGEM_COLOR_V3_5.md` (piloto técnico). O repositório público contém assets e documentação, mas o projeto V3.4/V3.5 pode estar apenas no workspace do Claude Code ou ZIP do usuário. Não publicar brutos de clientes.
+
+## Histórico
 # HD — AC Motion Studio | Franciele Fotografias | Teste V3.5 de imagem
 
 **FASE ATIVA V3.5 — TESTE DE RESTAURAÇÃO E COLOR GRADING:** A V3.4 está aprovada VISUALMENTE em ritmo/montagem, mas o reparo sonoro ainda exige escuta humana. Leia PRIMEIRO `docs/TRATAMENTO_IMAGEM_COLOR_V3_5.md`. Produza SOMENTE comparativos A/B de três cenas em cima do master V3.4, sem reabrir a montagem nem reprocessar o áudio. **Não renderize o master V3.5 completo antes de aprovarmos o look.**

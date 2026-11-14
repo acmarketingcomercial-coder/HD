@@ -1,5 +1,5 @@
 {
-  "version": "3.5-test",
+  "version": "3.5-full",
   "generated_at": "2026-11-13",
   "campaign": "Franciele Fotografias — Reserva Programada",
   "video": "O carnê que vira fotografia",
@@ -15,7 +15,7 @@
   "no_text_overlays": false,
   "voice_original_only": true,
   "repository_binary_assets_status": "AUDIO_LOGO_CAPA_MOCKUP_E_CINCO_VIDEOS_PRESENTES_EM_ASSETS",
-  "note": "V3.4 de 30,8s verificada: vídeo 1080x1920 30fps H.264 Rec709 AAC 48k. Primeiro testar A/B redução de artefatos, nitidez e cinematic editorial natural em IMG_2040/2042/2043, usando fonte original, respeitando grade prévio de IMG_2042. Não reconstruir rostos, não empilhar filtros, não grade global no Instagram/carnê/logo. Áudio V3.4 preservado, escuta final pendente. Repositório HD contém assets/docs; código-fonte V3.4 veio em ZIP anexado.",
+  "note": "Piloto V3.5 aprovado pela direção após revisão visual dos A/B e crops em 100%. Render do master completo autorizado para revisão, com timeline da V3.4 intacta e áudio AAC copiado sem reencodar. Em C (IMG_2043), preservar detalhes faciais e luminância; usar menos tratamento se necessário. Não veicular antes das autorizações de imagem/licença e escuta humana.",
   "files": [
     {
       "path": "assets/narracao_franciele_reserva_programada_original.ogg",
@@ -164,7 +164,7 @@
       "direção V2 renderizada em prévia"
     ]
   },
-  "active_direction": "V3.5_piloto_qualidade_color",
+  "active_direction": "V3.5_master_imagem",
   "voice_corrected_seconds_approx": 30.1985,
   "voice_corrected_script": "scripts/preparar_locucao_v3.sh",
   "voice_corrected_output": "assets/narracao_franciele_corrigida_v3.wav",
@@ -208,8 +208,16 @@
   "v3_4_audio_status": "reparo_medido_escuta_humana_pendente",
   "v3_5_scope": "tratar seletivamente videos reais, teste A/B primeiro; não colorir logo, capa, boletos ou interface Instagram",
   "v3_5_test_authorized": true,
-  "v3_5_master_full_render_authorized": false,
-  "v3_5_look_approved": false,
+  "v3_5_master_full_render_authorized": true,
+  "v3_5_look_approved": true,
   "color_qa_document": "docs/TRATAMENTO_IMAGEM_COLOR_V3_5.md",
-  "v3_4_source_package_received": "franciele_reserva_projeto_master_V3_4.zip (anexo da usuária, não materializado no GitHub)"
+  "v3_4_source_package_received": "franciele_reserva_projeto_master_V3_4.zip (anexo da usuária, não materializado no GitHub)",
+  "v3_5_pilot_status": "aprovado_com_cautela_IMG_2043_cena_C",
+  "v3_5_full_doc": "docs/FINALIZACAO_IMAGEM_V3_5.md",
+  "v3_5_approval_details": {
+    "IMG_2040": "aprovado, preservar pretos e pele",
+    "IMG_2042": "aprovado, preservar clareamento localizado sem duplicar",
+    "IMG_2043": "aprovado com cautela: minimizar amaciamento do rosto e evitar perda extra de luminosidade"
+  },
+  "audio_from_version": "V3.4 AAC stream copy sem reprocessar"
 }
