@@ -1,9 +1,13 @@
-# ASSETS — ÍNDICE
+# Assets oficiais — ainda pendentes
 
-Diretórios planejados:
-- `referencias_aprovadas/`: PNGs aprovados para *comparação visual*, nunca para modificação.
-- `audio/originais/`: dois MP3s recebidos e imutáveis.
-- `producao/`: rigs, sprites, props e cenários produzidos e auditados.
-- `rascunhos_nao_aprovados/`: somente caso necessário para rastrear rejeições, **não** usar como fonte.
+Nenhuma logo oficial, fonte, voz, fotografia ou personagem aprovado foi transferido para este novo projeto. O `StoryPilot` utiliza apenas desenho vetorial programático e tokens **provisórios**.
 
-**As quatro referências aprovadas e os dois MP3s originais já estão versionados no GitHub nos subdiretórios acima.** Verifique os hashes registrados em `MANIFESTO_SHA256.json` antes de utilizá-los. Falta produzir rigs, props isolados, animatic e filme final.
+Quando aprovados, organizar:
+- `assets/brand/` (logo original, identidade master, autorização);
+- `assets/voice/` (locução final, duração e aprovação);
+- `assets/characters/` (mestres, sprites, rigs, pose sheets);
+- `assets/scenes/` (cenários e props isolados);
+- `assets/sfx/` e `assets/music/` (licenças e atribuições);
+- `assets/MANIFESTO.md` (nome, origem, uso, SHA-256 e estado de aprovação).
+
+Não comitar mídias com direitos incertos, tokens, credenciais ou arquivos grandes desnecessários. Não interpretar pasta vazia como asset disponível.

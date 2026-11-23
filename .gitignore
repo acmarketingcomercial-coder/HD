@@ -1,12 +1,17 @@
 node_modules/
+out/
 dist/
+build/
+.tmp/
 .cache/
-tmp/
-.DS_Store
 *.log
-output/tmp/
-output/proxies/
-output/cache/
 .env
 .env.*
 !.env.example
+.DS_Store
+coverage/
+*.mp4
+*.mov
+*.zip
+# Áudios licenciados e aprovados podem ser incluídos em assets/ (ou Git LFS).
+# Não ignorar mp3/wav globalmente, pois são insumos necessários para sincronização.
