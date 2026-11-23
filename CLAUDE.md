@@ -37,3 +37,9 @@ Render outputs, caches e arquivos sensíveis não devem ser commitados; registra
 
 ## Critérios de aceite
 Ver `docs/05_QA_E_ENTREGA.md`. Escopo atual = protótipo técnico, NÃO filme concluído.
+
+## Atualização obrigatória — identidade AC (2026-11-23)
+- Consultar também `docs/07_BRAND_KIT_AC_MARKETING.md`, `docs/08_REFERENCIAS_E_STYLEFRAMES.md` e `docs/09_MENSAGEM_CLAUDE_BRANDING.md` antes do piloto visual.
+- Logo original fornecida na conversa do ChatGPT, mas **arquivo ainda não importado** ao GitHub: não inventar nem redesenhar; solicitar a transferência de PNG original para `assets/brand/logo/ac-marketing-oficial.png`.
+- O Claude deve pesquisar referências de fontes verificáveis, apresentar 3 abordagens autorais, submeter styleframes e só então animar piloto de 3–5 s.
+- Paleta do PNG: `#BD0D2B`, `#ED1C24`, `#FFFFFF` (amostragem); demais cores são provisórias, sem fonte de tipografia oficial confirmada.
