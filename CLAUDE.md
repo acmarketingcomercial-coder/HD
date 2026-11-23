@@ -22,7 +22,7 @@ Se não houver acesso a modelo generativo ou mídia indispensável, crie um plac
 4. Criar personagens **isolados** com consistência e rigs reutilizáveis; manter espelhamentos, cabelos, sardas e figurinos.
 5. Produzir props **um por arquivo** (álbum, foto, câmera, desenho, lápis, caixa); sem infográficos, captions, quadros múltiplos.
 6. Produzir 12 planos, fazendo render de teste a cada plano; registrar composição, transições e QA.
-7. Mixar diálogos (inais/saídas suaves, nivelamento), efeitos e trilha original/licenciada; validar inteligibilidade em celular.
+7. Mixar diálogos (entradas/saídas suaves, nivelamento), efeitos e trilha original/licenciada; validar inteligibilidade em celular.
 8. Renderizar master 1080×1920, 30 fps, H.264, AAC; produzir versão sem trilha se útil à revisão.
 9. QA independente completo e documentação de alterações; nenhum "feito" sem prova de arquivo e teste.
 

@@ -11,8 +11,8 @@ Projeto: Franciele Fotografias / *Histórias que o Natal Guarda* / EP01 *A pesso
 | Sala principal no presente | APROVADO | Usar como layout de referência |
 | Três lembranças antigas | APROVADO | Mesmo ambiente em momentos diferentes |
 | Direção do cenário fotográfico final | APROVADO | Referência em prancha editorial, ainda não fundo isolado |
-| MENINA_COMPLETO.mp3 | RECEBIDO | 17,084s, mono, MP3, 44.100Hz |
-| MAE_COMPLETO.mp3 | RECEBIDO | 9,561s, mono, MP3, 44.100Hz |
+| MENINA_COMPLETO.mp3 | PRESENTE NO REPOSITÓRIO | 17,084s, mono, MP3, 44.100Hz |
+| MAE_COMPLETO.mp3 | PRESENTE NO REPOSITÓRIO | 9,561s, mono, MP3, 44.100Hz |
 | Qualidade artística final dos áudios | A VALIDAR | Medição técnica não substitui escuta |
 | Álbum isolado gerado em tentativa | RASCUNHO NÃO APROVADO | Não assumir final |
 | Fotos antigas / câmera / lápis / desenho separados | PENDENTE | Gerar individualmente |

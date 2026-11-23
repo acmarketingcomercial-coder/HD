@@ -6,7 +6,7 @@ Produzir um curta Reels **60s, 2D cinematográfico, emocional e reproduzível** 
 ## Fase 0 — Inventário e segurança
 - Ler `CLAUDE.md`, docs 00–11 e config.
 - Inspecionar tudo no repositório; não assumir que as imagens/MP3 já foram carregados.
-- Importar imagens/MP3 do ZIP complementar se fornecido, respeitando `docs/09_MANIFESTO_DE_ASSETS.md`.
+- Conferir as seis mídias já presentes em `assets/referencias_aprovadas/` e `assets/audio/originais/` com `assets/MANIFESTO_SHA256.json`. Importar o ZIP apenas se alguma mídia estiver faltando ou corrompida.
 - Registrar hashes, dimensões e duração.
 - Nunca recuperar arquivos CEMESC de branch de backup para este curta.
 

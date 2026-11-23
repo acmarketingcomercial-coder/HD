@@ -33,7 +33,7 @@
 | `assets/` | Diretórios destinados às referências aprovadas e áudios |
 
 ### Status de arquivos de mídia
-**A documentação está no GitHub; os PNGs e MP3s originais devem ser importados do pacote local anexo ao handoff antes da produção.** Não trate referências descritas como arquivos disponíveis se elas não estiverem efetivamente em `assets/`. O repositório não deve conter as várias imagens rejeitadas de gerações anteriores.
+**As quatro pranchas visuais aprovadas e os dois MP3s originais já estão no GitHub**, organizados em `assets/referencias_aprovadas/` e `assets/audio/originais/`. Os arquivos são referências brutas; sprites, props isolados e filme final ainda não foram produzidos.
 
 ### Princípios criativos
 1. Não criar um anúncio disfarçado: contar uma história autônoma.

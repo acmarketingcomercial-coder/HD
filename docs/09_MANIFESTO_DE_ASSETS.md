@@ -1,7 +1,7 @@
 # MANIFESTO DE MÍDIAS E PROVENIÊNCIA
 
 ## Fontes do projeto na conversa
-Os arquivos abaixo foram disponibilizados na conversa e são incluídos no **ZIP de handoff complementar**; devem ser copiados **manualmente/por Claude** para os caminhos definitivos se não estiverem presentes no GitHub. Verifique hashes após importar.
+Os seis arquivos abaixo estão **presentes no GitHub nos caminhos definitivos**. Foram comparados ao ZIP complementar por hash Git SHA-1 de blob e tamanho, com correspondência integral. O ZIP é backup/handoff opcional, não requisito para clonar e começar a etapa de auditoria. Há hashes SHA-256 em `assets/MANIFESTO_SHA256.json` para verificação independente.
 
 | Caminho previsto no repo | Origem no handoff | Status | Uso |
 |---|---|---|---|

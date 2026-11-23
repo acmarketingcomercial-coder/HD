@@ -7,7 +7,7 @@
 | MAE_COMPLETO.mp3 | 9,560813 s | MP3 | 44.100 Hz | mono |
 **Somadas:** 26,645s incluindo pausas, **não** 26,645s de fala contínua.
 
-Destinos quando importados:
+Fontes originais disponíveis no repositório:
 - `assets/audio/originais/MENINA_COMPLETO.mp3`
 - `assets/audio/originais/MAE_COMPLETO.mp3`
 
