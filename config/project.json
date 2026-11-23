@@ -1,0 +1,50 @@
+{
+  "id": "historias-que-o-natal-guarda-ep01",
+  "owner": "Franciele Fotografias",
+  "episode": "01",
+  "title": "A pessoa que faltava na foto",
+  "date": "2026-11-23",
+  "targetDurationSeconds": 60,
+  "resolution": {
+    "width": 1080,
+    "height": 1920
+  },
+  "frameRate": 30,
+  "animation": "2D cinematográfico, texturas ilustradas",
+  "language": "pt-BR",
+  "approval": {
+    "storyScript": "approved-v3",
+    "characters": "approved-reference",
+    "mainRoom": "approved-reference",
+    "memories": "approved-reference",
+    "finalStudio": "approved-direction-reference",
+    "individualProps": "pending",
+    "voicesArtisticQA": "pending",
+    "finalMovie": "pending"
+  },
+  "speechSources": [
+    {
+      "path": "assets/audio/originais/MENINA_COMPLETO.mp3",
+      "durationSeconds": 17.084063,
+      "format": "mp3",
+      "sampleRate": 44100,
+      "channels": 1
+    },
+    {
+      "path": "assets/audio/originais/MAE_COMPLETO.mp3",
+      "durationSeconds": 9.560813,
+      "format": "mp3",
+      "sampleRate": 44100,
+      "channels": 1
+    }
+  ],
+  "prohibited": [
+    "price overlays",
+    "CTA",
+    "fake brand logo",
+    "character drift",
+    "unlicensed soundtrack",
+    "dialogue rewrite",
+    "treating moodboards as final sprites"
+  ]
+}

@@ -1,28 +1,53 @@
-# HD — AC Motion Studio | CEMESC
+# HISTÓRIAS QUE O NATAL GUARDA
+## EP. 01 — A pessoa que faltava na foto
 
-**Projeto único ativo deste repositório:** CEMESC — Reels Urologia: acordar à noite para urinar / noctúria.
+**Projeto de curta-metragem em motion 2D para Franciele Fotografias · Natal 2026.**
 
-## Começar
-Leia, nesta ordem:
+- **Formato:** Reels vertical 1080 × 1920 (9:16)
+- **Duração-alvo:** 60 segundos; não acelerar vozes para caber
+- **Idioma:** português brasileiro
+- **Marca:** Franciele Fotografias, estúdio em Coluna/MG
+- **Proposta:** história emocional, **não** propaganda explícita
+- **Status:** roteiro V3.0, design de personagens, sala, lembranças e direção do cenário final aprovados; produção e QA pendentes
 
-1. [Ordem de execução para Claude Code](projects/cemesc/urologia-nocturia/TAREFA_CLAUDE.md)
-2. [Briefing audiovisual completo e copy v04 aprovada](projects/cemesc/urologia-nocturia/BRIEFING_CODEX_v01.md)
-3. [Manifesto de assets e requisitos de fidelidade](projects/cemesc/urologia-nocturia/MANIFESTO_ASSETS.md)
+> **Entrada obrigatória para Claude Code:** leia [CLAUDE.md](CLAUDE.md) e [docs/00_STATUS_E_FONTE_DA_VERDADE.md](docs/00_STATUS_E_FONTE_DA_VERDADE.md) antes de modificar qualquer arquivo.
 
-## Produção
-- **Cliente:** CEMESC — Centro Médico Especializado de Coluna, Coluna/MG.
-- **Objetivo:** Reels educativo de Urologia com cenas humanizadas, banco de vídeos / cenas ilustrativas IA, motion discreto e sound design orgânico.
-- **Formato:** vertical 9:16, 1080×1920; 30 fps sugeridos.
-- **Duração:** determinada pela locução disponibilizada, originalmente ~73,51 segundos.
-- **Estado:** **roteiro v04 e direção aprovada para produção de prévia**. Publicação e aprovação clínica ainda pendentes.
-- **Execução:** Claude Code / AC Motion Studio. Não criar outro conceito ou alterar a narração.
+### Estrutura
+| Local | Finalidade |
+|---|---|
+| `CLAUDE.md` | Protocolo de execução do agente |
+| `docs/01_BRIEFING_CRIATIVO.md` | Conceito, público, tom, objetivo |
+| `docs/02_ROTEIRO_APROVADO.md` | Texto, falas e 6 cenas do roteiro V3.0 |
+| `docs/03_STORYBOARD_E_PLANO_DE_CAMERA.md` | 12 planos, movimentos e transições |
+| `docs/04_BIBLIA_DE_PERSONAGENS.md` | Lia, Clara, Daniel e idades |
+| `docs/05_CENARIOS_E_OBJETOS.md` | Ambiente, lembranças, fotografia final e props |
+| `docs/06_AUDIO_E_SINCRONIA.md` | Fontes, ordem, tratamento, lip-sync |
+| `docs/07_DIRECAO_DE_MOTION.md` | Pipeline de execução, técnica e som |
+| `docs/08_QA_E_CRITERIOS_DE_ACEITE.md` | Validação independente |
+| `docs/09_MANIFESTO_DE_ASSETS.md` | Inventário e aprovação de mídias |
+| `docs/10_DECISOES_E_ERROS.md` | Histórico de decisões e tentativas rejeitadas |
+| `docs/11_ENTREGA_E_PUBLICACAO.md` | Exportação e handoff |
+| `docs/12_TAREFA_EXECUTIVA_CLAUDE.md` | Ordem de execução autorizada |
+| `config/project.json` | Dados técnicos e bloqueios |
+| `config/shotlist.json` | Marcação inicial de planos |
+| `assets/` | Diretórios destinados às referências aprovadas e áudios |
 
-## Arquivos de mídia
+### Status de arquivos de mídia
+**A documentação está no GitHub; os PNGs e MP3s originais devem ser importados do pacote local anexo ao handoff antes da produção.** Não trate referências descritas como arquivos disponíveis se elas não estiverem efetivamente em `assets/`. O repositório não deve conter as várias imagens rejeitadas de gerações anteriores.
 
-**Os dois arquivos enviados pelo usuário já estão nesta `main`:** [narração ElevenLabs](projects/cemesc/urologia-nocturia/ElevenLabs_2026-11-18T22_05_48_Will%20-%20Deep%2C%20Smooth%20and%20Affectionate_pvc_sp100_s38_sb75_se16_m2.mp3) e [logo `Logo Cemesc.png`](projects/cemesc/urologia-nocturia/Logo%20Cemesc.png). O MP3 corresponde exatamente ao original fornecido; o PNG preserva os dados visuais originais de `e.png`, com diferença de 10 bytes apenas nos metadados. Consultar `MANIFESTO_ASSETS.md` para hashes e nomes exatos. A pasta `references/` conserva uma logo de backup histórico e não substitui a logo atual. A liberação de uso final da marca e a revisão clínica/publicitária ainda exigem conferência.
+### Princípios criativos
+1. Não criar um anúncio disfarçado: contar uma história autônoma.
+2. A protagonista percebe que a mãe aparece em todos os Natais **na vida**, mas não nas fotografias.
+3. O desenho infantil é o primeiro clímax; o último clique, com a mãe na foto, resolve o conflito.
+4. Expressões humanas contidas > lágrimas forçadas, efeitos exagerados ou frases motivacionais.
+5. Personagens e cenário aprovados são referências visuais, **não sprites prontos**.
+6. Nenhum material extraído de um painel pode ser usado diretamente sem limpeza, isolamento e QA.
 
-## Gestão e histórico
+### Segurança de produção
+- Não editar nem publicar campanhas ou marcas de terceiros.
+- Não inventar logotipo oficial: se a logo não for fornecida, usar assinatura tipográfica com o nome da marca.
+- Não colocar preços, parcelas, CTAs, números ou textos de venda dentro do filme.
+- Usar trilha e efeitos com licenças adequadas, preferencialmente originais.
+- Não fazer merge/deploy em sistemas externos; este repositório serve à produção do curta.
 
-A árvore `main` foi reorganizada em 23/11/2026 para exibir somente o projeto CEMESC. O estado anterior está conservado na branch `backup/hd-before-cemesc-only-20261123`, para eventual recuperação. Outras branches antigas podem continuar existindo; **não são projetos ativos da main**.
-
-Nunca subir dados de pacientes, material restrito de bancos de imagens, senhas ou credenciais. Sem deploy ou publicação automática.
+**Histórico anterior do HD:** arquivado em `backup/hd-antes-natal-2026-11-23`; a branch `main` foi substituída por este projeto.

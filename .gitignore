@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.cache/
+tmp/
+.DS_Store
+*.log
+output/tmp/
+output/proxies/
+output/cache/
+.env
+.env.*
+!.env.example
