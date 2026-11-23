@@ -38,3 +38,9 @@ Leia `CLAUDE.md` e `docs/00_STATUS_E_APROVACOES.md` antes de desenvolver. Depois
 O projeto anterior da branch `main` foi preservado integralmente em `backup/hd-before-ac-motion-studio-20261123` (commit `4b99714511db408080ecb7eebce512263d6b6b05`). Outros backups históricos permanecem nas branches do repositório. Esta substituição não apaga o histórico Git.
 
 Este repositório não tem relação de deploy com o AC Marketing OS, CEMESC ou projetos anteriores.
+
+## Identidade visual e pesquisa de referências
+- [Brand Kit da AC](docs/07_BRAND_KIT_AC_MARKETING.md): uso correto da logomarca, amostra de cores e pendências.
+- [Pesquisa visual e styleframes](docs/08_REFERENCIAS_E_STYLEFRAMES.md): três abordagens de 2D editorial para a AC.
+- [Mensagem ao Claude Code](docs/09_MENSAGEM_CLAUDE_BRANDING.md): próximo handoff.
+- A logo original recebida no ChatGPT **ainda não foi importada como binário para este repositório**.
