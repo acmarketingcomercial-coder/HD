@@ -12,9 +12,6 @@ build/
 coverage/
 *.mp4
 *.mov
-*.wav
-*.mp3
-*.aiff
-*.flac
 *.zip
-!assets/README.md
+# Áudios licenciados e aprovados podem ser incluídos em assets/ (ou Git LFS).
+# Não ignorar mp3/wav globalmente, pois são insumos necessários para sincronização.
