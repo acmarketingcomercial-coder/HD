@@ -6,7 +6,7 @@
 Produzir Reels vertical 1080×1920, 9:16, 30 fps sugeridos, guiado pela locução ElevenLabs original de duração aproximada 73,51 segundos. Vídeo de valor sobre noctúria com b-roll humanizado, diferenciação entre o motivo de acordar e a vontade de urinar, relação possível com inchaço das pernas, ressalvas e fechamento com atendimento em Urologia na CEMESC. Sem aparência de card estático animado.
 
 ## Passos
-1. Localize os assets originais recebidos separadamente do GitHub (logo atual `e.png` e MP3 ElevenLabs). Verifique seus SHA-256 no manifesto. Não invente paths. Não use a logo de backup como master.
+1. Os assets foram enviados ao **mesmo diretório desta tarefa**: `Logo Cemesc.png` e `ElevenLabs_2026-11-18T22_05_48_Will - Deep, Smooth and Affectionate_pvc_sp100_s38_sb75_se16_m2.mp3`. Localize estes nomes literalmente, confira hashes SHA-256 do Git no manifesto e não invente paths. A logo de backup na pasta `references/` não é master.
 2. Decupe a locução real por trechos e timecodes, conferindo palavra por palavra com a copy bloqueada no briefing. **Não reescreva, não use TTS substituto e não altere sentido com cortes.** Divergências devem ser relatadas antes de render definitivo.
 3. Crie `shotlist.md`, `voice_cue_sheet.csv`, `assets_manifest.json`, storyboard e plano de Foley/trilha sincronizados.
 4. Busque imagens de banco com uso permitido ou gere cenas IA *ilustrativas*. Nunca apresente pessoas, salas ou atendimentos sintéticos como integrantes ou instalações reais da CEMESC. Preserve anatomia, naturalidade, continuidade e direitos.
@@ -17,8 +17,8 @@ Produzir Reels vertical 1080×1920, 9:16, 30 fps sugeridos, guiado pela locuçã
 9. Entregue prévia + fontes editáveis + QA; **NÃO publique, não faça deploy nem acione automações**. Aguarde aprovação da pessoa responsável.
 
 ## Bloqueadores
-- MP3 original ausente: sem corte final sincronizado ou mix definitiva.
-- Logo atual ausente/não conferida: sem assinatura definitiva; não refazer tipografia ou símbolo.
+- MP3 está no Git e foi conferido em integridade com o original. **Ainda conferir auditivamente fala × copy v04**; qualquer divergência impede o corte final até resolução.
+- `Logo Cemesc.png` foi recebido e tem dados de imagem iguais ao arquivo `e.png` anteriormente enviado. Ainda validar autorização de uso como master final e identificação publicitária; nunca redesenhar a marca.
 - Revisão médica/regulatória, serviços disponíveis e licenças não confirmados: sem publicação.
 - Não editar outros projetos. `main` existe somente para CEMESC; branch de backup pode conter conteúdo legado.
 
