@@ -16,8 +16,8 @@ Este é o único projeto ativo na branch principal do HD.
 - **Pendente antes da entrega final:** inspeção da voz, confirmação da logo oficial master, verificação de serviço atual, revisão clínica/publicitária, direitos de imagem.
 - **Proibido:** alterar copy, reconstruir logo, usar pessoas sintéticas como equipe real, gerar diagnóstico, inventar fatos ou publicar sem aceite.
 
-## Entradas ainda não versionadas
-A logo atual `e.png` e o áudio ElevenLabs fornecidos no ChatGPT não foram transferidos ao GitHub. O Claude deverá obtê-los do pacote entregue e validar checksum SHA-256 conforme manifesto. Não usar a logo de backup como substituta sem autorização.
+## Entradas versionadas em 23/11/2026
+Estão nesta mesma pasta os arquivos `Logo Cemesc.png` e `ElevenLabs_2026-11-18T22_05_48_Will - Deep, Smooth and Affectionate_pvc_sp100_s38_sb75_se16_m2.mp3`. O áudio corresponde ao original, com hash SHA-256 confirmado. A logo está visualmente preservada em relação a `e.png`; a diferença de 10 bytes ocorre nos metadados PNG, portanto **use o checksum registrado para o arquivo do Git, não o do `e.png` original**. Conferir nomes e hashes em `MANIFESTO_ASSETS.md`. A logo histórica da pasta `references/` é apenas para comparação, não para substituição. Como o repositório é público, não acrescentar recursos restritos sem autorização.
 
 ## Execução
 1. Conferir entradas e aprovações.
