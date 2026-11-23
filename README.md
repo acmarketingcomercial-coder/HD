@@ -1,53 +1,40 @@
-# HISTÓRIAS QUE O NATAL GUARDA
-## EP. 01 — A pessoa que faltava na foto
+# AC MOTION STUDIO — Animated Business Stories
 
-**Projeto de curta-metragem em motion 2D para Franciele Fotografias · Natal 2026.**
+Repositório de produção audiovisual da **AC Marketing Digital**, dedicado a Reels com storytelling 2D, personagens ilustrados, Motion Design editorial e sound design narrativo.
 
-- **Formato:** Reels vertical 1080 × 1920 (9:16)
-- **Duração-alvo:** 60 segundos; não acelerar vozes para caber
-- **Idioma:** português brasileiro
-- **Marca:** Franciele Fotografias, estúdio em Coluna/MG
-- **Proposta:** história emocional, **não** propaganda explícita
-- **Status:** roteiro V3.0, design de personagens, sala, lembranças e direção do cenário final aprovados; produção e QA pendentes
+**ESTADO:** infraestrutura inicial configurada; **roteiro final, identidade gráfica e mídias oficiais ainda NÃO aprovados/importados**. A composição StoryPilot é somente um teste de linguagem e pipeline — **não é o vídeo final**.
 
-> **Entrada obrigatória para Claude Code:** leia [CLAUDE.md](CLAUDE.md) e [docs/00_STATUS_E_FONTE_DA_VERDADE.md](docs/00_STATUS_E_FONTE_DA_VERDADE.md) antes de modificar qualquer arquivo.
+## Direção
+- A AC vende estratégia, comunicação e marketing integrado para empresas estruturadas e compradores de maior valor.
+- O conteúdo deve ensinar decisões úteis e gerar vontade real de salvar ou compartilhar.
+- Cada Reel terá quebra de padrão nos primeiros 2s, um loop aberto específico, aplicação prática e pergunta genuína ao final.
+- Visual: personagens 2D com atuação, ambientes profissionais, continuidade entre cenas, motion editorial e sound design integrado.
+- A narrativa deve parecer uma descoberta, não propaganda tradicional ou aula previsível.
 
-### Estrutura
-| Local | Finalidade |
-|---|---|
-| `CLAUDE.md` | Protocolo de execução do agente |
-| `docs/01_BRIEFING_CRIATIVO.md` | Conceito, público, tom, objetivo |
-| `docs/02_ROTEIRO_APROVADO.md` | Texto, falas e 6 cenas do roteiro V3.0 |
-| `docs/03_STORYBOARD_E_PLANO_DE_CAMERA.md` | 12 planos, movimentos e transições |
-| `docs/04_BIBLIA_DE_PERSONAGENS.md` | Lia, Clara, Daniel e idades |
-| `docs/05_CENARIOS_E_OBJETOS.md` | Ambiente, lembranças, fotografia final e props |
-| `docs/06_AUDIO_E_SINCRONIA.md` | Fontes, ordem, tratamento, lip-sync |
-| `docs/07_DIRECAO_DE_MOTION.md` | Pipeline de execução, técnica e som |
-| `docs/08_QA_E_CRITERIOS_DE_ACEITE.md` | Validação independente |
-| `docs/09_MANIFESTO_DE_ASSETS.md` | Inventário e aprovação de mídias |
-| `docs/10_DECISOES_E_ERROS.md` | Histórico de decisões e tentativas rejeitadas |
-| `docs/11_ENTREGA_E_PUBLICACAO.md` | Exportação e handoff |
-| `docs/12_TAREFA_EXECUTIVA_CLAUDE.md` | Ordem de execução autorizada |
-| `config/project.json` | Dados técnicos e bloqueios |
-| `config/shotlist.json` | Marcação inicial de planos |
-| `assets/` | Diretórios destinados às referências aprovadas e áudios |
+## Estado do episódio inicial
+**Título/conceito:** O erro começa antes do post.
+**Hipótese narrativa ainda não aprovada:** uma construtora de alto padrão publica uma bela casa, mas não responde perguntas decisivas do comprador. Uma objeção comercial recorrente vira conteúdo útil.
+**Não há texto final bloqueado, nem narração, logo oficial ou personagens master neste repositório.**
 
-### Status de arquivos de mídia
-**As quatro pranchas visuais aprovadas e os dois MP3s originais já estão no GitHub**, organizados em `assets/referencias_aprovadas/` e `assets/audio/originais/`. Os arquivos são referências brutas; sprites, props isolados e filme final ainda não foram produzidos.
+## Pré-requisitos
+Node.js LTS, npm, browser compatível para Remotion; ferramentas locais FFmpeg/ffprobe recomendadas para inspeção de mídia. Confirme versão/licença e instalação das dependências antes de renderizar. Não publicar vídeos sem checar direitos de trilha/efeitos.
 
-### Princípios criativos
-1. Não criar um anúncio disfarçado: contar uma história autônoma.
-2. A protagonista percebe que a mãe aparece em todos os Natais **na vida**, mas não nas fotografias.
-3. O desenho infantil é o primeiro clímax; o último clique, com a mãe na foto, resolve o conflito.
-4. Expressões humanas contidas > lágrimas forçadas, efeitos exagerados ou frases motivacionais.
-5. Personagens e cenário aprovados são referências visuais, **não sprites prontos**.
-6. Nenhum material extraído de um painel pode ser usado diretamente sem limpeza, isolamento e QA.
+## Comandos
+```bash
+npm install
+npm run check:inputs
+npm run typecheck
+npm run compositions
+npm run dev
+npm run render:pilot
+```
 
-### Segurança de produção
-- Não editar nem publicar campanhas ou marcas de terceiros.
-- Não inventar logotipo oficial: se a logo não for fornecida, usar assinatura tipográfica com o nome da marca.
-- Não colocar preços, parcelas, CTAs, números ou textos de venda dentro do filme.
-- Usar trilha e efeitos com licenças adequadas, preferencialmente originais.
-- Não fazer merge/deploy em sistemas externos; este repositório serve à produção do curta.
+Composição: `StoryPilot` (5s, 1080x1920, 30 fps). A prévia é apenas uma prova técnica ilustrativa, com cores e tipografia provisórias.
 
-**Histórico anterior do HD:** arquivado em `backup/hd-antes-natal-2026-11-23`; a branch `main` foi substituída por este projeto.
+## Fonte de verdade
+Leia `CLAUDE.md` e `docs/00_STATUS_E_APROVACOES.md` antes de desenvolver. Depois siga `docs/06_TAREFA_CLAUDE.md`. NÃO use textos antigos de outros projetos nem trate hipóteses como aprovadas.
+
+## Segurança e histórico
+O projeto anterior da branch `main` foi preservado integralmente em `backup/hd-before-ac-motion-studio-20261123` (commit `4b99714511db408080ecb7eebce512263d6b6b05`). Outros backups históricos permanecem nas branches do repositório. Esta substituição não apaga o histórico Git.
+
+Este repositório não tem relação de deploy com o AC Marketing OS, CEMESC ou projetos anteriores.
