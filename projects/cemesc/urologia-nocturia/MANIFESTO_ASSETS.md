@@ -8,7 +8,7 @@ Esta relação registra os arquivos recebidos no ChatGPT e o status de transport
 | LOGO-ATUAL-01 | `e.png` | 313.262 bytes | `83c7c683af79be208efae674b7142c566f3c7e93b46cebc867a457774048cdc9` | **A transferir por canal autorizado** | Imagem de logo mais recente apresentada pelo usuário, 1080×1080 RGBA |
 | LOGO-HIST-01 | `Logo_Cemesc.png` | 40.208 bytes | `9ce02a33963cb2676a7d5d81aa713f5c922cecf9350fbace6ce5e101fac061e4` | **A transferir se necessário, não master** | Arquivo anterior do projeto, 1092×1092 RGB |
 | BRIEFING-01 | `CEMESC_Urologia_AC_Motion_Studio_Codex_v01.md` | 32.919 bytes na origem | `abe798f32c7eb253bb7f3225a0a0b0afaaf836948adeabf2871187e13be8c6e0` | **Presente como texto extraído em BRIEFING_CODEX_v01.md** | Instrução de produção/autossuficiente |
-| BRAND-ARCHIVE-01 | `CEMESC_Logo_Oficial_20261112.png` | 366.218 bytes | SHA-256 não conferido | Já existe na branch histórica `backup-cemesc-antes-souza-20261113` | Referência histórica apenas, não substituir LOGO-ATUAL-01 sem comparação |
+| BRAND-ARCHIVE-01 | `CEMESC_Logo_Oficial_20261112.png` | 366.218 bytes | SHA-256 não conferido | Incluído em `references/CEMESC_Logo_Oficial_20261112_ARCHIVE.png`, copiado do backup histórico | Referência histórica apenas, não substituir LOGO-ATUAL-01 sem comparação |
 
 ## Tratamento de ativos
 
