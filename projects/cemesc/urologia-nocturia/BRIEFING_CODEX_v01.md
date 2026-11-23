@@ -1,5 +1,7 @@
 # AC MOTION STUDIO — ORDEM TÉCNICA AUTOSSUFICIENTE PARA CODEX
 
+> **Atualização de ingestão no GitHub (23/11/2026; não altera copy nem direção):** os arquivos de entrada já estão ao lado deste briefing: `Logo Cemesc.png` (imagem atual) e `ElevenLabs_2026-11-18T22_05_48_Will - Deep, Smooth and Affectionate_pvc_sp100_s38_sb75_se16_m2.mp3`. Para nomes, hashes, direitos e estado de entrada, consultar o `MANIFESTO_ASSETS.md` atualizado. Trechos históricos deste documento que descrevem arquivos "disponíveis nesta conversa" devem ser lidos com esta atualização operacional. Uso definitivo da marca e QA clínico/publicitário ainda exigem validação. **Todas as falas e textos aprovados abaixo permanecem bloqueados.**
+
 ## A. IDENTIFICAÇÃO E ESTADO DE APROVAÇÃO
 
 **Projeto:** CEMESC — Reels educativo de Urologia: noctúria / acordar de madrugada para urinar.
