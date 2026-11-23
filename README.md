@@ -19,7 +19,7 @@ Leia, nesta ordem:
 
 ## Arquivos de mídia
 
-A locução ElevenLabs e a logo `e.png` **ainda precisam ser disponibilizadas no workspace do Claude**. O arquivo original está no pacote fornecido ao usuário, não no GitHub. A pasta `references/` contém somente uma logo de backup histórico; **não é autorização para substituir a logo atual**.
+**Os dois arquivos enviados pelo usuário já estão nesta `main`:** [narração ElevenLabs](projects/cemesc/urologia-nocturia/ElevenLabs_2026-11-18T22_05_48_Will%20-%20Deep%2C%20Smooth%20and%20Affectionate_pvc_sp100_s38_sb75_se16_m2.mp3) e [logo `Logo Cemesc.png`](projects/cemesc/urologia-nocturia/Logo%20Cemesc.png). O MP3 corresponde exatamente ao original fornecido; o PNG preserva os dados visuais originais de `e.png`, com diferença de 10 bytes apenas nos metadados. Consultar `MANIFESTO_ASSETS.md` para hashes e nomes exatos. A pasta `references/` conserva uma logo de backup histórico e não substitui a logo atual. A liberação de uso final da marca e a revisão clínica/publicitária ainda exigem conferência.
 
 ## Gestão e histórico
 
