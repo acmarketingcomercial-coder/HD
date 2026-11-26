@@ -1,13 +1,6 @@
-# Assets oficiais — ainda pendentes
+# Pacote local de ativos — GeB APAC
 
-Nenhuma logo oficial, fonte, voz, fotografia ou personagem aprovado foi transferido para este novo projeto. O `StoryPilot` utiliza apenas desenho vetorial programático e tokens **provisórios**.
-
-Quando aprovados, organizar:
-- `assets/brand/` (logo original, identidade master, autorização);
-- `assets/voice/` (locução final, duração e aprovação);
-- `assets/characters/` (mestres, sprites, rigs, pose sheets);
-- `assets/scenes/` (cenários e props isolados);
-- `assets/sfx/` e `assets/music/` (licenças e atribuições);
-- `assets/MANIFESTO.md` (nome, origem, uso, SHA-256 e estado de aprovação).
-
-Não comitar mídias com direitos incertos, tokens, credenciais ou arquivos grandes desnecessários. Não interpretar pasta vazia como asset disponível.
+Extraia na raiz do repositório HD após trocar para feat/geb-apac-reel. Os caminhos já estão organizados para assets/geb-apac/.
+Leia docs/GEB_APAC_PRODUCAO.md no GitHub: https://github.com/acmarketingcomercial-coder/HD/blob/feat/geb-apac-reel/docs/GEB_APAC_PRODUCAO.md
+O repositório é público. Não force a inclusão destes arquivos no Git: a pasta foi adicionada ao .gitignore. Não redistribuir sem autorização. Nenhum documento de processo, dado pessoal de cliente, foto de terceiros, arquivo de fonte, trilha ou efeito sonoro foi incluído.
+Confira os hashes no manifest.json e a correspondência do áudio com o roteiro V7 antes de produzir. A duração real do MP3 é 91,559125 s.

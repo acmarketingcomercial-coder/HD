@@ -1,0 +1,49 @@
+{
+  "project": "GEB-APAC-20261126",
+  "repository": "acmarketingcomercial-coder/HD",
+  "branch": "feat/geb-apac-reel",
+  "assets": [
+    {
+      "path": "assets/geb-apac/voice/ElevenLabs_2026-11-26T16_39_37_GeB_ivc_s50_sim75_v4.mp3",
+      "sha256": "c341f350d7ebc1f744a6742709e6ee99a32fcedf2fe4671a9adb84b8872986af",
+      "bytes": 1481883,
+      "source": "Arquivo fornecido pelo responsável no projeto ChatGPT",
+      "rights_status": "Confirmar autorização de uso e publicação com o responsável"
+    },
+    {
+      "path": "assets/geb-apac/brand/GEB_LOGO_BRANCA_TRANSPARENTE.png",
+      "sha256": "1ee5faec4276c4b2218c8c972bc01df65a6487d53c9604ba61f29922e8cf140a",
+      "bytes": 23339,
+      "source": "Arquivo fornecido pelo responsável no projeto ChatGPT",
+      "rights_status": "Confirmar autorização de uso e publicação com o responsável"
+    },
+    {
+      "path": "assets/geb-apac/brand/GEB_LOGO_DOURADA_BRANCA_TRANSPARENTE.png",
+      "sha256": "8d38fa8ba927787750c6c403d1f0b87839db6115c63a30b6b84bc752f0094b73",
+      "bytes": 27059,
+      "source": "Arquivo fornecido pelo responsável no projeto ChatGPT",
+      "rights_status": "Confirmar autorização de uso e publicação com o responsável"
+    },
+    {
+      "path": "assets/geb-apac/brand/GEB_LOGO_DOURADA_NAVY_TRANSPARENTE.png",
+      "sha256": "b5dbd102059dc40da08285c7b78d0fff9f2a0b137657ad0b9be20790dc1d043c",
+      "bytes": 32654,
+      "source": "Arquivo fornecido pelo responsável no projeto ChatGPT",
+      "rights_status": "Confirmar autorização de uso e publicação com o responsável"
+    }
+  ],
+  "voice": {
+    "duration_seconds": 91.559125,
+    "codec": "mp3",
+    "sample_rate": 44100,
+    "channels": 1,
+    "alignment_status": "Pausas medidas; alinhamento palavra a palavra pendente"
+  },
+  "pending": [
+    "Fotos ou vídeos reais autorizados do Dr. Vinicius",
+    "B-roll APAC com autorização/licença",
+    "Trilha e SFX com autorização/licença",
+    "Validação de identificação OAB e das fontes de marca",
+    "Revisão jurídica e de áudio/copy antes da publicação"
+  ]
+}
