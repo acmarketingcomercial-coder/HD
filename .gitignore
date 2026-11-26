@@ -13,5 +13,6 @@ coverage/
 *.mp4
 *.mov
 *.zip
-# Áudios licenciados e aprovados podem ser incluídos em assets/ (ou Git LFS).
-# Não ignorar mp3/wav globalmente, pois são insumos necessários para sincronização.
+# Assets da produção GeB são mantidos localmente: HD é público.
+assets/geb-apac/
+# Não commitar áudio bruto, fontes, documentos de caso ou stems fora da pasta local.
